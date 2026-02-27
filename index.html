@@ -908,7 +908,7 @@ function onScroll(){const sy=window.scrollY,docH=document.documentElement.scroll
 window.addEventListener('scroll',()=>{if(!scrollTicking){requestAnimationFrame(onScroll);scrollTicking=true}},{passive:true});
 
 /* REVEAL */
-const revObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:.15});
+const revObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');revObs.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.rv,.rv-left,.rv-right,.rv-scale').forEach(el=>revObs.observe(el));
 
 /* COUNT UP */
@@ -924,7 +924,7 @@ document.querySelectorAll('.svc-tab').forEach(tab=>{tab.addEventListener('click'
 
 /* GALLERY INFINITE */
 const galStrip=document.getElementById('galStrip');
-galStrip.innerHTML+=galStrip.innerHTML;
+[...galStrip.children].forEach(child=>galStrip.appendChild(child.cloneNode(true)));
 
 /* LIGHTBOX */
 const lb=document.getElementById('lb'),lbInner=document.getElementById('lbInner'),lbCounter=document.getElementById('lbCounter'),lbCap=document.getElementById('lbCap');

@@ -50,7 +50,1343 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans+KR:wght@200;300;400;500;600&family=Outfit:wght@200;300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans+KR:wght@200;300;400;500;600&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<style>.loader{display:none!important}.rv,.rv-left,.rv-right,.rv-scale{opacity:1!important;transform:none!important}.hero-title,.hero-over,.hero-sub,.hero-ctas,.hero-scroll{opacity:1!important;animation:none!important}.gal-strip{animation:none!important}.mq-inner{animation:none!important}</style>
+<style>
+
+
+
+.loader{
+display:none!important}
+
+.rv,.rv-left,.rv-right,.rv-scale{
+opacity:1!important;
+transform:none!important}
+
+.hero-title,.hero-over,.hero-sub,.hero-ctas,.hero-scroll{
+opacity:1!important;
+animation:none!important}
+
+.gal-strip{
+animation:none!important}
+
+.mq-inner{
+animation:none!important}
+
+/* ============================================================
+BRAND STORY — timeline + founding story
+============================================================ */
+.story{
+padding:160px 48px;
+background:var(--bg2)}
+
+.story-inner{
+
+max-width:1100px;
+
+margin:0 auto;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:72px;
+
+align-items:start;
+}
+
+.story-text .sec-desc{
+max-width:100%;
+margin-bottom:28px}
+
+.story-highlight{
+
+font-family:var(--display);
+
+font-size:clamp(1rem,1.8vw,1.3rem);
+
+font-style:italic;
+
+color:var(--fg2);
+
+line-height:1.9;
+
+padding-left:20px;
+
+border-left:2px solid var(--border3);
+
+margin-bottom:28px;
+}
+
+.timeline{
+position:relative;
+padding-left:28px}
+
+.timeline::before{
+
+content:'';
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+bottom:0;
+
+width:1px;
+
+background:var(--border2);
+}
+
+.tl-item{
+
+position:relative;
+
+padding:0 0 32px;
+
+opacity:0;
+
+transform:translateY(16px);
+
+transition:all .6s var(--ease);
+}
+
+.tl-item.show{
+opacity:1;
+transform:none}
+
+.tl-item::before{
+
+content:'';
+
+position:absolute;
+
+left:-32px;
+
+top:4px;
+
+width:7px;
+
+height:7px;
+
+border-radius:50%;
+
+background:var(--dim3);
+
+border:2px solid var(--bg2);
+
+transition:background .4s;
+}
+
+.tl-item.show::before{
+background:var(--fg)}
+
+.tl-year{
+
+font-family:var(--display);
+
+font-size:.9rem;
+
+color:var(--fg);
+
+margin-bottom:4px;
+}
+
+.tl-desc{
+
+font-size:.68rem;
+
+color:var(--dim);
+
+line-height:1.9;
+
+font-weight:200;
+}
+
+/* ============================================================
+BOOKING PROCESS — 4 steps
+============================================================ */
+.process{
+padding:140px 48px;
+background:var(--bg)}
+
+.proc-header{
+max-width:1100px;
+margin:0 auto 52px}
+
+.proc-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:1px;
+
+max-width:1100px;
+
+margin:0 auto;
+
+background:var(--border2);
+}
+
+.proc-card{
+
+background:var(--white);
+
+padding:36px 28px;
+
+text-align:center;
+
+position:relative;
+
+transition:all .5s var(--ease);
+}
+
+.proc-card:hover{
+background:var(--bg)}
+
+.proc-num{
+
+font-family:var(--display);
+
+font-size:2.4rem;
+
+color:var(--bg3);
+
+line-height:1;
+
+margin-bottom:16px;
+
+transition:color .5s var(--ease);
+}
+
+.proc-card:hover .proc-num{
+color:var(--bg4)}
+
+.proc-card h3{
+
+font-family:var(--display);
+
+font-size:.9rem;
+
+font-weight:400;
+
+margin-bottom:8px;
+}
+
+.proc-card-en{
+
+font-family:var(--sans);
+
+font-size:.34rem;
+
+color:var(--dim2);
+
+letter-spacing:.16em;
+
+text-transform:uppercase;
+
+margin-bottom:12px;
+
+font-weight:300;
+}
+
+.proc-card p{
+
+font-size:.64rem;
+
+color:var(--dim);
+
+line-height:2;
+
+font-weight:200;
+}
+
+.proc-arrow{
+
+position:absolute;
+
+right:-8px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+font-size:.7rem;
+
+color:var(--dim3);
+
+z-index:1;
+}
+
+/* ============================================================
+PRODUCT LINEUP
+============================================================ */
+.products{
+padding:140px 48px;
+background:var(--white);
+border-top:1px solid var(--border)}
+
+.prod-header{
+max-width:1100px;
+margin:0 auto 52px}
+
+.prod-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+max-width:1100px;
+
+margin:0 auto;
+}
+
+.prod-card{
+
+border:1px solid var(--border);
+
+padding:32px 24px;
+
+text-align:center;
+
+transition:all .5s var(--ease);
+
+position:relative;
+
+overflow:hidden;
+}
+
+.prod-card::after{
+
+content:'';
+
+position:absolute;
+
+bottom:0;
+
+left:0;
+
+right:0;
+
+height:2px;
+
+background:var(--fg);
+
+transform:scaleX(0);
+
+transition:transform .5s var(--ease);
+}
+
+.prod-card:hover{
+border-color:var(--border3);
+box-shadow:var(--shadow-sm)}
+
+.prod-card:hover::after{
+transform:scaleX(1)}
+
+.prod-logo{
+
+width:48px;
+
+height:48px;
+
+border-radius:50%;
+
+background:var(--bg2);
+
+margin:0 auto 16px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-family:var(--display);
+
+font-size:.7rem;
+
+color:var(--dim);
+
+font-style:italic;
+}
+
+.prod-card h3{
+
+font-family:var(--display);
+
+font-size:.9rem;
+
+font-weight:400;
+
+margin-bottom:4px;
+}
+
+.prod-card-sub{
+
+font-family:var(--sans);
+
+font-size:.34rem;
+
+color:var(--dim2);
+
+letter-spacing:.14em;
+
+text-transform:uppercase;
+
+margin-bottom:12px;
+
+font-weight:300;
+}
+
+.prod-card p{
+
+font-size:.62rem;
+
+color:var(--dim);
+
+line-height:1.9;
+
+font-weight:200;
+}
+
+.prod-use{
+
+margin-top:12px;
+
+display:flex;
+
+gap:4px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+}
+
+.prod-tag{
+
+font-family:var(--sans);
+
+font-size:.3rem;
+
+letter-spacing:.08em;
+
+text-transform:uppercase;
+
+padding:3px 8px;
+
+border:1px solid var(--border2);
+
+color:var(--dim);
+
+font-weight:400;
+}
+
+/* ============================================================
+STYLE PORTFOLIO — filtered grid
+============================================================ */
+.portfolio{
+padding:160px 48px;
+background:var(--bg2)}
+
+.pf-header{
+max-width:1100px;
+margin:0 auto 16px}
+
+.pf-filters{
+
+display:flex;
+
+gap:4px;
+
+max-width:1100px;
+
+margin:0 auto 32px;
+
+flex-wrap:wrap;
+}
+
+.pf-filter{
+
+font-family:var(--sans);
+
+font-size:.42rem;
+
+letter-spacing:.14em;
+
+text-transform:uppercase;
+
+color:var(--dim);
+
+padding:8px 18px;
+
+background:none;
+
+border:1px solid var(--border2);
+
+font-weight:300;
+
+transition:all .3s var(--ease);
+
+cursor:pointer;
+}
+
+.pf-filter.active,.pf-filter:hover{
+border-color:var(--fg);
+background:var(--fg);
+color:var(--bg)}
+
+.pf-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:4px;
+
+max-width:1100px;
+
+margin:0 auto;
+}
+
+.pf-card{
+
+position:relative;
+
+overflow:hidden;
+
+aspect-ratio:3/4;
+
+background:var(--bg3);
+
+transition:all .5s var(--ease);
+
+cursor:pointer;
+}
+
+.pf-card.hidden{
+display:none}
+
+.pf-card-img{
+width:100%;
+height:100%;
+transition:transform .7s var(--ease)}
+
+.pf-card:hover .pf-card-img{
+transform:scale(1.06)}
+
+.pf-card-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(transparent 40%,rgba(10,10,10,.7));
+
+opacity:0;
+
+transition:opacity .5s var(--ease);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-end;
+
+padding:20px;
+}
+
+.pf-card:hover .pf-card-overlay{
+opacity:1}
+
+.pf-card-title{
+
+font-family:var(--display);
+
+font-size:.7rem;
+
+color:rgba(255,255,255,.9);
+
+font-style:italic;
+
+margin-bottom:4px;
+}
+
+.pf-card-meta{
+
+font-family:var(--sans);
+
+font-size:.32rem;
+
+color:rgba(255,255,255,.4);
+
+letter-spacing:.12em;
+
+text-transform:uppercase;
+}
+
+.pf-card-tags{
+display:flex;
+gap:4px;
+margin-top:8px}
+
+.pf-card-tag{
+
+font-family:var(--sans);
+
+font-size:.26rem;
+
+padding:2px 6px;
+
+border:1px solid rgba(255,255,255,.2);
+
+color:rgba(255,255,255,.5);
+
+letter-spacing:.06em;
+
+text-transform:uppercase;
+}
+
+/* ============================================================
+HAIR CARE GUIDE
+============================================================ */
+.care-guide{
+padding:140px 48px;
+background:var(--bg)}
+
+.cg-header{
+max-width:1100px;
+margin:0 auto 52px}
+
+.cg-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+max-width:1100px;
+
+margin:0 auto;
+}
+
+.cg-card{
+
+background:var(--white);
+
+border:1px solid var(--border);
+
+padding:36px 28px;
+
+transition:all .5s var(--ease);
+
+position:relative;
+}
+
+.cg-card::before{
+
+content:attr(data-num);
+
+position:absolute;
+
+top:20px;
+
+right:20px;
+
+font-family:var(--display);
+
+font-size:2rem;
+
+color:var(--bg2);
+
+line-height:1;
+}
+
+.cg-card:hover{
+border-color:var(--border3);
+box-shadow:var(--shadow-sm);
+transform:translateY(-4px)}
+
+.cg-card h3{
+
+font-family:var(--display);
+
+font-size:.95rem;
+
+font-weight:400;
+
+margin-bottom:4px;
+}
+
+.cg-card-en{
+
+font-family:var(--sans);
+
+font-size:.34rem;
+
+color:var(--dim2);
+
+letter-spacing:.14em;
+
+text-transform:uppercase;
+
+margin-bottom:14px;
+
+font-weight:300;
+}
+
+.cg-card p{
+
+font-size:.64rem;
+
+color:var(--dim);
+
+line-height:2.2;
+
+font-weight:200;
+}
+
+.cg-tip{
+margin-top:14px;
+padding-top:14px;
+border-top:1px solid var(--border)}
+
+.cg-tip span{
+
+font-family:var(--sans);
+
+font-size:.36rem;
+
+letter-spacing:.1em;
+
+text-transform:uppercase;
+
+color:var(--dim2);
+
+font-weight:400;
+}
+
+.cg-tip p{
+font-size:.6rem;
+margin-top:4px}
+
+/* ============================================================
+CTA BANNER
+============================================================ */
+.cta-banner{
+
+padding:100px 48px;
+
+background:var(--fg);
+
+color:var(--bg);
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+}
+
+.cta-banner::before{
+
+content:'NOIR';
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+font-family:var(--display);
+
+font-size:clamp(6rem,15vw,12rem);
+
+color:rgba(255,255,255,.02);
+
+letter-spacing:.3em;
+
+pointer-events:none;
+
+white-space:nowrap;
+}
+
+.cta-banner-inner{
+
+position:relative;
+
+z-index:1;
+
+max-width:600px;
+
+margin:0 auto;
+}
+
+.cta-banner .sec-label{
+color:var(--dim);
+justify-content:center}
+
+.cta-banner .sec-label::before{
+background:var(--dim)}
+
+.cta-banner h2{
+
+font-family:var(--display);
+
+font-size:clamp(1.3rem,2.6vw,2rem);
+
+font-weight:400;
+
+color:var(--bg);
+
+margin-bottom:12px;
+
+font-style:italic;
+}
+
+.cta-banner p{
+
+font-size:.72rem;
+
+color:rgba(255,255,255,.35);
+
+line-height:2;
+
+font-weight:200;
+
+margin-bottom:32px;
+}
+
+.cta-btns{
+
+display:flex;
+
+gap:12px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+}
+
+.cta-btn-light{
+
+font-family:var(--sans);
+
+font-size:.5rem;
+
+padding:14px 32px;
+
+background:var(--bg);
+
+color:var(--fg);
+
+text-decoration:none;
+
+letter-spacing:.14em;
+
+text-transform:uppercase;
+
+font-weight:300;
+
+transition:all .4s var(--ease);
+}
+
+.cta-btn-light:hover{
+transform:translateY(-2px);
+box-shadow:var(--shadow-lg)}
+
+.cta-btn-outline{
+
+font-family:var(--sans);
+
+font-size:.5rem;
+
+padding:14px 28px;
+
+border:1px solid rgba(255,255,255,.2);
+
+color:rgba(255,255,255,.6);
+
+text-decoration:none;
+
+letter-spacing:.14em;
+
+text-transform:uppercase;
+
+font-weight:300;
+
+transition:all .4s var(--ease);
+}
+
+.cta-btn-outline:hover{
+border-color:rgba(255,255,255,.5);
+color:var(--bg);
+transform:translateY(-2px)}
+
+/* ============================================================
+INSTAGRAM FEED GRID
+============================================================ */
+.insta-grid{
+
+display:grid;
+
+grid-template-columns:repeat(6,1fr);
+
+gap:4px;
+
+max-width:720px;
+
+margin:0 auto 28px;
+}
+
+.insta-thumb{
+
+position:relative;
+
+aspect-ratio:1;
+
+overflow:hidden;
+
+cursor:pointer;
+}
+
+.insta-thumb-img{
+width:100%;
+height:100%;
+transition:transform .5s var(--ease)}
+
+.insta-thumb:hover .insta-thumb-img{
+transform:scale(1.08)}
+
+.insta-thumb-overlay{
+
+position:absolute;
+
+inset:0;
+
+background:rgba(10,10,10,.4);
+
+opacity:0;
+
+transition:opacity .4s var(--ease);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+}
+
+.insta-thumb:hover .insta-thumb-overlay{
+opacity:1}
+
+.insta-thumb-overlay span{
+
+font-family:var(--sans);
+
+font-size:.36rem;
+
+color:rgba(255,255,255,.8);
+
+letter-spacing:.14em;
+
+text-transform:uppercase;
+}
+
+/* ============================================================
+DESIGNER DETAIL OVERLAY
+============================================================ */
+.ds-overlay{
+
+position:fixed;
+
+inset:0;
+
+z-index:250;
+
+background:rgba(10,10,10,.92);
+
+backdrop-filter:blur(24px);
+
+opacity:0;
+
+pointer-events:none;
+
+transition:opacity .5s var(--ease);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+}
+
+.ds-overlay.open{
+opacity:1;
+pointer-events:auto}
+
+.ds-detail{
+
+max-width:680px;
+
+width:90%;
+
+max-height:80vh;
+
+overflow-y:auto;
+
+padding:48px;
+
+position:relative;
+}
+
+.ds-detail-close{
+
+position:absolute;
+
+top:0;
+
+right:0;
+
+width:40px;
+
+height:40px;
+
+background:none;
+
+border:1px solid rgba(255,255,255,.1);
+
+color:rgba(255,255,255,.45);
+
+font-size:1rem;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+transition:all .4s var(--ease);
+
+border-radius:50%;
+
+cursor:pointer;
+}
+
+.ds-detail-close:hover{
+border-color:rgba(255,255,255,.3);
+color:#fff;
+transform:rotate(90deg)}
+
+.ds-detail h3{
+
+font-family:var(--display);
+
+font-size:1.6rem;
+
+color:var(--bg);
+
+margin-bottom:4px;
+}
+
+.ds-detail-role{
+
+font-family:var(--sans);
+
+font-size:.42rem;
+
+color:var(--dim);
+
+letter-spacing:.2em;
+
+text-transform:uppercase;
+
+margin-bottom:20px;
+
+display:block;
+}
+
+.ds-detail-bio{
+
+font-size:.72rem;
+
+color:rgba(255,255,255,.5);
+
+line-height:2.2;
+
+font-weight:200;
+
+margin-bottom:24px;
+}
+
+.ds-detail-specs{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:16px;
+
+margin-bottom:24px;
+}
+
+.ds-spec{
+padding:16px;
+border:1px solid rgba(255,255,255,.08)}
+
+.ds-spec-label{
+
+font-family:var(--sans);
+
+font-size:.34rem;
+
+color:var(--dim);
+
+letter-spacing:.14em;
+
+text-transform:uppercase;
+
+margin-bottom:4px;
+}
+
+.ds-spec-val{
+font-family:var(--display);
+font-size:.85rem;
+color:var(--bg)}
+
+.ds-detail-works{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:4px;
+
+margin-bottom:24px;
+}
+
+.ds-work{
+aspect-ratio:1;
+overflow:hidden}
+
+.ds-work-img{
+width:100%;
+height:100%}
+
+.ds-detail-cta{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:12px 28px;
+
+background:var(--bg);
+
+color:var(--fg);
+
+text-decoration:none;
+
+font-family:var(--sans);
+
+font-size:.48rem;
+
+letter-spacing:.14em;
+
+text-transform:uppercase;
+
+font-weight:300;
+
+transition:all .4s var(--ease);
+}
+
+.ds-detail-cta:hover{
+transform:translateY(-2px);
+box-shadow:var(--shadow-lg)}
+
+/* ============================================================
+ENHANCED FOOTER — 4 column grid
+============================================================ */
+.footer-enhanced{
+
+padding:80px 48px 0;
+
+background:var(--fg);
+
+color:var(--bg);
+
+border-top:none;
+}
+
+.ft-grid{
+
+display:grid;
+
+grid-template-columns:1.5fr 1fr 1fr 1fr;
+
+gap:40px;
+
+max-width:1100px;
+
+margin:0 auto;
+
+padding-bottom:40px;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.ft-brand{
+
+font-family:var(--display);
+
+font-size:1.4rem;
+
+letter-spacing:.22em;
+
+margin-bottom:14px;
+
+display:block;
+}
+
+.ft-brand-desc{
+
+font-size:.64rem;
+
+color:rgba(255,255,255,.3);
+
+line-height:2;
+
+font-weight:200;
+
+margin-bottom:18px;
+}
+
+.ft-social{
+display:flex;
+gap:10px}
+
+.ft-social-link{
+
+width:32px;
+
+height:32px;
+
+border-radius:50%;
+
+border:1px solid rgba(255,255,255,.1);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:rgba(255,255,255,.35);
+
+text-decoration:none;
+
+font-size:.6rem;
+
+transition:all .4s var(--ease);
+}
+
+.ft-social-link:hover{
+border-color:rgba(255,255,255,.3);
+color:var(--bg)}
+
+.ft-col h4{
+
+font-family:var(--sans);
+
+font-size:.42rem;
+
+letter-spacing:.2em;
+
+text-transform:uppercase;
+
+color:rgba(255,255,255,.25);
+
+margin-bottom:18px;
+
+font-weight:400;
+}
+
+.ft-col a,.ft-col p{
+
+display:block;
+
+font-size:.62rem;
+
+color:rgba(255,255,255,.4);
+
+text-decoration:none;
+
+line-height:2.2;
+
+font-weight:200;
+
+transition:color .3s;
+}
+
+.ft-col a:hover{
+color:var(--bg)}
+
+.ft-bottom{
+
+max-width:1100px;
+
+margin:0 auto;
+
+padding:24px 0;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+}
+
+.ft-bottom-copy{
+
+font-family:var(--sans);
+
+font-size:.38rem;
+
+color:rgba(255,255,255,.15);
+
+letter-spacing:.08em;
+}
+
+.ft-bottom-links{
+display:flex;
+gap:16px}
+
+.ft-bottom-link{
+
+font-family:var(--sans);
+
+font-size:.36rem;
+
+color:rgba(255,255,255,.2);
+
+text-decoration:none;
+
+letter-spacing:.08em;
+
+transition:color .3s;
+}
+
+.ft-bottom-link:hover{
+color:rgba(255,255,255,.5)}
+
+</style>
 </noscript>
 
 <style>
@@ -71,7 +1407,7 @@
   --ease:cubic-bezier(.16,1,.3,1);--ease-out:cubic-bezier(.33,1,.68,1);--ease-in-out:cubic-bezier(.65,0,.35,1);
 }
 html{scroll-behavior:smooth;cursor:none}
-body{font-family:var(--body);background:var(--bg);color:var(--fg);overflow-x:hidden;font-weight:300;cursor:none;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+body{font-family:var(--body);background:var(--bg);color:var(--fg);overflow-x:hidden;font-weight:300;cursor:none;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word;transition:background .5s var(--ease),color .5s var(--ease)}
 ::selection{background:var(--fg);color:var(--bg)}
 a,button{cursor:none}
 ::-webkit-scrollbar{width:0;display:none}
@@ -105,7 +1441,10 @@ a,button{cursor:none}
 .cur-label.show{opacity:1}
 
 
-/* contain */
+
+/* ============================================================
+   CONTAINMENT — Performance optimization
+   ============================================================ */
 section{contain:layout style paint}
 .svc-card,.art-card,.gal-item,.rv-card{contain:layout style}
 
@@ -454,6 +1793,9 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
 [data-theme="dark"] .mob-menu{background:var(--bg)}
 [data-theme="dark"] .mob-menu::before{color:var(--bg3)}
 [data-theme="dark"] .hbg s{background:var(--fg)}
+[data-theme="dark"] .footer-enhanced{background:#050505}
+[data-theme="dark"] .cta-banner{background:#050505}
+[data-theme="dark"] .story .tl-item::before{border-color:var(--bg2)}
 .theme-toggle{position:fixed;top:24px;right:108px;z-index:201;width:32px;height:32px;border-radius:50%;border:1px solid var(--border2);background:var(--white);display:flex;align-items:center;justify-content:center;transition:all .4s var(--ease);font-size:.65rem;line-height:1;opacity:.45;cursor:pointer}
 .theme-toggle:hover{opacity:1;border-color:var(--fg);transform:scale(1.1)}
 
@@ -474,6 +1816,8 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
    WIDESCREEN ≥1500
    ============================================================ */
 @media(min-width:1500px){
+  .story-inner,.proc-grid,.prod-grid,.pf-grid,.cg-grid,.cta-banner-inner{max-width:1200px}
+  .story,.process,.products,.portfolio,.care-guide,.cta-banner{padding-left:calc((100vw - 1200px)/2);padding-right:calc((100vw - 1200px)/2)}
   .services,.reviews,.designers,.info,.faq{padding-left:calc((100vw - 1200px)/2);padding-right:calc((100vw - 1200px)/2)}
   .about{max-width:1200px}
 }
@@ -485,6 +1829,15 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   .hero{grid-template-columns:1fr}.hero-right{display:none}.hero-left{padding:120px 36px 80px}.hero-num{display:none}
   .about{grid-template-columns:1fr 1fr;gap:48px;padding:120px 36px}.about-circle{display:none}
   .ds-grid{grid-template-columns:repeat(2,1fr)}
+  .story-inner{grid-template-columns:1fr;gap:40px}
+  .proc-grid{grid-template-columns:repeat(2,1fr)}.proc-arrow{display:none}
+  .prod-grid{grid-template-columns:repeat(2,1fr)}
+  .pf-grid{grid-template-columns:repeat(3,1fr)}
+  .cg-grid{grid-template-columns:repeat(2,1fr)}
+  .ft-grid{grid-template-columns:repeat(2,1fr);gap:28px}
+  #space [style*="grid-template-columns:2fr"]{grid-template-columns:1fr 1fr!important}
+  #space [style*="grid-row"]{grid-row:auto!important}
+  #why-noir [style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important}
 }
 
 /* ============================================================
@@ -538,6 +1891,31 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   .ft-inner{flex-direction:column;gap:10px;text-align:center}
   .kakao-float{display:none}.mob-bar{display:block}
   .mob-link::after{display:none}
+  .story{padding:80px 20px}.story-inner{grid-template-columns:1fr;gap:28px}
+  .process{padding:80px 20px}.proc-grid{grid-template-columns:1fr}.proc-arrow{display:none}
+  .products{padding:80px 20px}.prod-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .portfolio{padding:80px 20px}.pf-grid{grid-template-columns:repeat(2,1fr);gap:2px}
+  .pf-filters{gap:4px;margin-bottom:20px}.pf-filter{font-size:.38rem;padding:6px 12px}
+  .pf-card-overlay{opacity:1;background:linear-gradient(transparent 50%,rgba(10,10,10,.5))}
+  .care-guide{padding:80px 20px}.cg-grid{grid-template-columns:1fr}
+  .cta-banner{padding:60px 20px}.cta-btns{flex-direction:column;align-items:center}
+  .cta-btn-light,.cta-btn-outline{width:100%;max-width:250px;text-align:center}
+  .insta-grid{grid-template-columns:repeat(3,1fr)}
+  .ft-grid{grid-template-columns:1fr;gap:28px;text-align:center}
+  .ft-social{justify-content:center}
+  .ft-bottom{flex-direction:column;gap:10px;text-align:center}
+  .ds-detail{padding:28px 20px}
+  .ds-detail-specs{grid-template-columns:1fr}
+  footer.footer-enhanced{padding:60px 20px 0}
+  #membership [style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important;gap:16px!important}
+  #membership{padding:80px 20px!important}
+  #press{padding:60px 20px!important}
+  #press [style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important;gap:12px!important}
+  #value-prop{padding:60px 20px!important}
+  #value-prop [style*="grid-template-columns:repeat(5"]{grid-template-columns:repeat(2,1fr)!important}
+  #space [style*="grid-template-columns:2fr"]{grid-template-columns:1fr!important}
+  #space [style*="grid-row"]{grid-row:auto!important}
+  #why-noir [style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important;gap:16px!important}
   .scroll-bar{height:1px}
 }
 @media(max-width:380px){
@@ -552,7 +1930,9 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
 }
 
 /* a11y */
-*:focus{outline:none}*:focus-visible{outline:2px solid var(--fg);outline-offset:3px;border-radius:2px}
+*:focus{outline:none}
+*:focus-visible{outline:2px solid var(--fg);outline-offset:3px;border-radius:2px}
+.pf-filter:focus-visible,.proc-card:focus-visible,.prod-card:focus-visible,.cg-card:focus-visible,.cta-btn-light:focus-visible,.cta-btn-outline:focus-visible,.ds-detail-cta:focus-visible,.ft-social-link:focus-visible,.ft-bottom-link:focus-visible,.insta-thumb:focus-visible{outline:2px solid var(--fg);outline-offset:3px;border-radius:2px}
 .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:12px 24px;z-index:99999;font-size:.7rem;letter-spacing:.1em;text-decoration:none;transition:top .3s}
 .skip-link:focus{top:12px}
 
@@ -560,12 +1940,13 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .loader{transition:none}.mq-inner{animation:none!important}.gal-strip{animation:none!important}.scroll-line::after{animation:none!important}
+  .tl-item,.pf-card,.cg-card,.proc-card,.prod-card{opacity:1!important;transform:none!important}
 }
 
 /* print */
 @media print{
   *{background:transparent!important;color:#000!important;box-shadow:none!important}
-  .loader,.scroll-bar,.cur,.cur-ring,.cur-label,.mob-menu,.kakao-float,.mob-bar,.back-top,.hero-scroll,.hero-num,.sec-dots,.theme-toggle,.toast{display:none!important}
+  .loader,.scroll-bar,.cur,.cur-ring,.cur-label,.mob-menu,.kakao-float,.mob-bar,.back-top,.hero-scroll,.hero-num,.sec-dots,.theme-toggle,.toast,.ds-overlay{display:none!important}
   nav{position:static;padding:16px 0;background:none!important;backdrop-filter:none}.nav-cta,.hbg{display:none}
   .hero{height:auto;min-height:auto;grid-template-columns:1fr;padding:32px 0}.hero-right{display:none}
   .rv,.rv-left,.rv-right,.rv-scale{opacity:1!important;transform:none!important}
@@ -574,6 +1955,22 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   @page{margin:1.5cm}
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"예약은 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"카카오톡 채널(@noir)로 예약해 주세요."}},
+    {"@type":"Question","name":"시술 시간은 얼마나 걸리나요?","acceptedAnswer":{"@type":"Answer","text":"커트는 약 60분, 컬러/펌은 약 2~3시간 소요됩니다."}},
+    {"@type":"Question","name":"주차가 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"건물 내 주차장 이용 가능합니다. 시술 시간에 따라 1~2시간 무료 주차 제공됩니다."}},
+    {"@type":"Question","name":"염색 후 관리는 어떻게 하나요?","acceptedAnswer":{"@type":"Answer","text":"시술 후 2~3일은 샴푸를 피해 주세요. 컬러 전용 샴푸 사용을 권합니다."}},
+    {"@type":"Question","name":"원하는 스타일 사진을 가져가도 되나요?","acceptedAnswer":{"@type":"Answer","text":"물론입니다. 레퍼런스 사진을 2~3장 준비해 주시면 상담이 수월합니다."}},
+    {"@type":"Question","name":"민감한 두피도 시술이 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 시술 전 두피 진단 후 저자극 제품으로 안전하게 시술합니다."}},
+    {"@type":"Question","name":"웨딩/촬영 헤어 메이크업도 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네, 웨딩 헤어와 촬영용 스타일링을 진행합니다. 카카오톡으로 문의해 주세요."}}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -639,6 +2036,10 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   <button class="hbg" id="hbg" aria-label="메뉴" aria-expanded="false"><s></s><s></s><s></s></button>
 </nav>
 
+
+<!-- ============================================================
+     HERO — Left-aligned split layout with parallax
+     ============================================================ -->
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-left">
@@ -658,6 +2059,10 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   <div class="hero-num" aria-hidden="true">N</div>
 </section>
 
+
+<!-- ============================================================
+     MARQUEE — Scrolling service keywords
+     ============================================================ -->
 <!-- MARQUEE -->
 <div class="marquee rv">
   <div class="mq-inner">
@@ -666,12 +2071,48 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   </div>
 </div>
 
+
+<!-- WHY NOIR -->
+<section class="why-noir rv" id="why-noir" style="padding:120px 48px;background:var(--white);border-bottom:1px solid var(--border)">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="sec-label">Why Us</div>
+    <h2 class="sec-title">왜 누아르인가요?</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:40px">
+      <div class="rv rv-d1" style="text-align:center;padding:28px 20px">
+        <div style="font-family:var(--display);font-size:2.2rem;color:var(--fg);margin-bottom:12px;line-height:1">8</div>
+        <div style="font-family:var(--sans);font-size:.36rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim2);margin-bottom:12px">Daily Limit</div>
+        <p style="font-size:.62rem;color:var(--dim);line-height:2;font-weight:200">하루 8명 한정으로<br>한 분 한 분에게<br>충분한 시간을 드립니다.</p>
+      </div>
+      <div class="rv rv-d2" style="text-align:center;padding:28px 20px">
+        <div style="font-family:var(--display);font-size:2.2rem;color:var(--fg);margin-bottom:12px;line-height:1">87%</div>
+        <div style="font-family:var(--sans);font-size:.36rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim2);margin-bottom:12px">Return Rate</div>
+        <p style="font-size:.62rem;color:var(--dim);line-height:2;font-weight:200">재방문율 87%.<br>한번 경험하면<br>다시 찾게 됩니다.</p>
+      </div>
+      <div class="rv rv-d3" style="text-align:center;padding:28px 20px">
+        <div style="font-family:var(--display);font-size:2.2rem;color:var(--fg);margin-bottom:12px;line-height:1">12+</div>
+        <div style="font-family:var(--sans);font-size:.36rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim2);margin-bottom:12px">Avg. Experience</div>
+        <p style="font-size:.62rem;color:var(--dim);line-height:2;font-weight:200">디자이너 평균 경력<br>12년 이상.<br>검증된 실력을 약속합니다.</p>
+      </div>
+      <div class="rv rv-d4" style="text-align:center;padding:28px 20px">
+        <div style="font-family:var(--display);font-size:2.2rem;color:var(--fg);margin-bottom:12px;line-height:1">4.9</div>
+        <div style="font-family:var(--sans);font-size:.36rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim2);margin-bottom:12px">Rating</div>
+        <p style="font-size:.62rem;color:var(--dim);line-height:2;font-weight:200">네이버, 카카오맵<br>평균 평점 4.9.<br>진심이 만든 결과입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ABOUT — Reversed split layout (text left, image right)
+     ============================================================ -->
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-text rv-left">
     <div class="sec-label">About Us</div>
     <p class="about-quote">유행보다<br><em>어울림을 먼저.</em></p>
     <p class="about-body">누아르는 2019년 청담동에서 시작한 프라이빗 헤어살롱입니다. 고객 한 분 한 분의 두상, 모질, 라이프스타일을 분석하여 가장 어울리는 스타일을 제안합니다. 트렌드를 쫓기보다, 일상에서 유지 가능한 아름다움을 추구합니다.</p>
+    <p class="about-body" style="margin-top:12px">세계적으로 검증된 프리미엄 제품만 사용하며, 모발 손상을 최소화하는 시술 방식을 고집합니다. 하루 8명 한정, 완전 예약제로 운영하여 한 분 한 분에게 충분한 시간을 드리고 있습니다.</p>
     <div class="about-stats rv rv-d2">
       <div class="stat"><span class="stat-num" data-count="8">0</span><span class="stat-label">하루 예약 (명)</span></div>
       <div class="stat"><span class="stat-num" data-count="60">0</span><span class="stat-label">최소 시술 (min)</span></div>
@@ -686,6 +2127,62 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   </div>
 </section>
 
+
+
+<!-- ============================================================
+     BRAND STORY — Timeline + founding narrative
+     ============================================================ -->
+<!-- BRAND STORY -->
+<section class="story rv" id="story">
+  <div class="story-inner">
+    <div class="story-text rv-left">
+      <div class="sec-label">Our Story</div>
+      <h2 class="sec-title">NOIR의 이야기</h2>
+      <p class="sec-desc">2018년, 단 두 평의 작은 공간에서 시작된 누아르는 '진짜 어울리는 머리'에 대한 고집 하나로 청담동까지 오게 되었습니다.</p>
+      <div class="story-highlight">"유행을 따르지 않겠다는 건, 더 깊이 고민하겠다는 뜻입니다."</div>
+      <p class="sec-desc">모든 고객의 두상, 모질, 라이프스타일을 분석하여 가장 자연스러운 스타일을 제안합니다. 하루 8명 한정, 완전 예약제로 운영하는 이유입니다.</p>
+    </div>
+    <div class="timeline rv-right">
+      <div class="tl-item rv rv-d1"><div class="tl-year">2018</div><div class="tl-desc">강남구 신사동 소규모 살롱 오픈. 커트 전문으로 시작.</div></div>
+      <div class="tl-item rv rv-d2"><div class="tl-year">2019</div><div class="tl-desc">청담동으로 이전. 프라이빗 살롱 콘셉트 확립.</div></div>
+      <div class="tl-item rv rv-d3"><div class="tl-year">2021</div><div class="tl-desc">디자이너 3인 체제. 컬러 및 펌 전문가 영입.</div></div>
+      <div class="tl-item rv rv-d4"><div class="tl-year">2023</div><div class="tl-desc">헤어 트렌드 어워드 수상. 프리미엄 브랜드 협업 시작.</div></div>
+      <div class="tl-item rv"><div class="tl-year">현재</div><div class="tl-desc">하루 8명 한정, 완전 예약제. 재방문율 87%.</div></div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============================================================
+     SALON SPACE — Interior photo grid
+     ============================================================ -->
+<!-- SALON SPACE -->
+<section class="rv" id="space" style="padding:120px 48px;background:var(--bg)">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="sec-label">Space</div>
+    <h2 class="sec-title">살롱 공간</h2>
+    <p class="sec-desc" style="margin-bottom:36px">프라이빗한 공간에서 온전히 자신에게 집중하는 시간을 선물합니다.</p>
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:4px">
+      <div style="grid-row:1/3;aspect-ratio:auto;min-height:360px;background:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80') center/cover no-repeat;position:relative;overflow:hidden" class="rv rv-d1" data-hover="Interior">
+        <div style="position:absolute;bottom:16px;left:16px;font-family:var(--display);font-size:.5rem;color:rgba(255,255,255,.5);font-style:italic">Reception</div>
+      </div>
+      <div style="aspect-ratio:1;background:url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=400&q=80') center/cover no-repeat;position:relative;overflow:hidden" class="rv rv-d2" data-hover="Interior">
+        <div style="position:absolute;bottom:16px;left:16px;font-family:var(--display);font-size:.5rem;color:rgba(255,255,255,.5);font-style:italic">Styling</div>
+      </div>
+      <div style="aspect-ratio:1;background:url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400&q=80') center/cover no-repeat;position:relative;overflow:hidden" class="rv rv-d3" data-hover="Interior">
+        <div style="position:absolute;bottom:16px;left:16px;font-family:var(--display);font-size:.5rem;color:rgba(255,255,255,.5);font-style:italic">Care Room</div>
+      </div>
+      <div style="aspect-ratio:16/9;background:url('https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?w=600&q=80') center/cover no-repeat;position:relative;overflow:hidden" class="rv rv-d2" data-hover="Interior">
+        <div style="position:absolute;bottom:16px;left:16px;font-family:var(--display);font-size:.5rem;color:rgba(255,255,255,.5);font-style:italic">Shampoo</div>
+      </div>
+      <div style="aspect-ratio:16/9;background:url('https://images.unsplash.com/photo-1560069513-5d4e966e7012?w=600&q=80') center/cover no-repeat;position:relative;overflow:hidden" class="rv rv-d3" data-hover="Interior">
+        <div style="position:absolute;bottom:16px;left:16px;font-family:var(--display);font-size:.5rem;color:rgba(255,255,255,.5);font-style:italic">Waiting</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES (TAB MENU — different from BLANC's expandable cards) -->
 <section class="services rv" id="services">
   <div class="svc-header"><div><div class="sec-label">Menu</div><h2 class="sec-title">시술 메뉴</h2></div></div>
@@ -696,10 +2193,16 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
     <button class="svc-tab" data-tab="care">Care</button>
   </div>
 
+  
+    <div style="max-width:1100px;margin:0 auto 32px;padding:20px 24px;border-left:2px solid var(--border3)">
+      <p style="font-size:.66rem;color:var(--dim);line-height:2.2;font-weight:200;font-style:italic">모든 가격은 VAT 포함 금액입니다. 길이, 모량에 따라 추가 비용이 발생할 수 있으며, 예약 시 정확한 견적을 안내드립니다. 시술 후 30일 이내 무료 보정 1회가 포함됩니다.</p>
+    </div>
   <div class="svc-panel active" id="panel-cut">
     <div class="svc-grid">
-      <div class="svc-card" data-hover="Detail"><div class="svc-card-top"><div><div class="svc-name">여성 커트</div><span class="svc-name-en">Women's Cut</span></div><div class="svc-price">50,000</div></div><p class="svc-desc">두상 분석 후 맞춤 커트. 샴푸+드라이 포함.</p><div class="svc-footer"><span class="svc-badge">Popular</span></div></div>
-      <div class="svc-card" data-hover="Detail"><div class="svc-card-top"><div><div class="svc-name">남성 커트</div><span class="svc-name-en">Men's Cut</span></div><div class="svc-price">40,000</div></div><p class="svc-desc">두상·모질 맞춤 커트. 드라이 스타일링 포함.</p><div class="svc-footer"></div></div>
+      <div class="svc-card" data-hover="Detail"><div class="svc-card-top"><div><div class="svc-name">여성 커트</div><span class="svc-name-en">Women's Cut</span></div><div class="svc-price">50,000</div></div><p class="svc-desc">두상 분석 후 맞춤 커트. 샴푸+드라이 포함.</p>
+              <div style="font-family:var(--sans);font-size:.32rem;color:var(--dim2);letter-spacing:.1em;margin-bottom:8px">약 60분 소요</div><div class="svc-footer"><span class="svc-badge">Popular</span></div></div>
+      <div class="svc-card" data-hover="Detail"><div class="svc-card-top"><div><div class="svc-name">남성 커트</div><span class="svc-name-en">Men's Cut</span></div><div class="svc-price">40,000</div></div><p class="svc-desc">두상·모질 맞춤 커트. 드라이 스타일링 포함.</p>
+              <div style="font-family:var(--sans);font-size:.32rem;color:var(--dim2);letter-spacing:.1em;margin-bottom:8px">약 50분 소요</div><div class="svc-footer"></div></div>
       <div class="svc-card" data-hover="Detail"><div class="svc-card-top"><div><div class="svc-name">앞머리 커트</div><span class="svc-name-en">Bang Trim</span></div><div class="svc-price">10,000</div></div><p class="svc-desc">기존 고객 무료.</p><div class="svc-footer"></div></div>
     </div>
   </div>
@@ -730,6 +2233,116 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   </div>
 </section>
 
+
+
+<!-- VALUE PROPOSITION -->
+<section class="rv" id="value-prop" style="padding:100px 48px;background:var(--bg);border-top:1px solid var(--border)">
+  <div style="max-width:1100px;margin:0 auto;text-align:center">
+    <div class="sec-label" style="justify-content:center">Promise</div>
+    <h2 class="sec-title">누아르의 약속</h2>
+    <p class="sec-desc" style="max-width:600px;margin:0 auto 40px">모든 시술에는 프리미엄 제품 사용, 사전 상담, 애프터케어 안내가 포함됩니다.</p>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border2)">
+      <div style="background:var(--white);padding:24px 16px;text-align:center" class="rv rv-d1">
+        <div style="font-family:var(--display);font-size:1.1rem;margin-bottom:6px">01</div>
+        <div style="font-family:var(--sans);font-size:.36rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;line-height:1.8">무료<br>두피 진단</div>
+      </div>
+      <div style="background:var(--white);padding:24px 16px;text-align:center" class="rv rv-d2">
+        <div style="font-family:var(--display);font-size:1.1rem;margin-bottom:6px">02</div>
+        <div style="font-family:var(--sans);font-size:.36rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;line-height:1.8">프리미엄<br>제품 사용</div>
+      </div>
+      <div style="background:var(--white);padding:24px 16px;text-align:center" class="rv rv-d3">
+        <div style="font-family:var(--display);font-size:1.1rem;margin-bottom:6px">03</div>
+        <div style="font-family:var(--sans);font-size:.36rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;line-height:1.8">30일 이내<br>무료 보정</div>
+      </div>
+      <div style="background:var(--white);padding:24px 16px;text-align:center" class="rv rv-d4">
+        <div style="font-family:var(--display);font-size:1.1rem;margin-bottom:6px">04</div>
+        <div style="font-family:var(--sans);font-size:.36rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;line-height:1.8">홈케어<br>가이드 제공</div>
+      </div>
+      <div style="background:var(--white);padding:24px 16px;text-align:center" class="rv">
+        <div style="font-family:var(--display);font-size:1.1rem;margin-bottom:6px">05</div>
+        <div style="font-family:var(--sans);font-size:.36rem;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;line-height:1.8">리터치<br>알림 서비스</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     BOOKING PROCESS — 4-step reservation flow
+     ============================================================ -->
+<!-- BOOKING PROCESS -->
+<section class="process rv" id="process">
+  <div class="proc-header"><div class="sec-label">Process</div><h2 class="sec-title">예약 프로세스</h2></div>
+  <div class="proc-grid">
+    <div class="proc-card rv rv-d1">
+      <div class="proc-num">01</div>
+      <h3>상담 예약</h3>
+      <div class="proc-card-en">Reservation</div>
+      <p>카카오톡 채널 또는 전화로 원하시는 날짜, 시간, 디자이너를 선택해 주세요.</p>
+      <span class="proc-arrow" aria-hidden="true">&rarr;</span>
+    </div>
+    <div class="proc-card rv rv-d2">
+      <div class="proc-num">02</div>
+      <h3>스타일 상담</h3>
+      <div class="proc-card-en">Consultation</div>
+      <p>얼굴형, 모질, 라이프스타일을 분석하여 최적의 스타일을 함께 찾아드립니다.</p>
+      <span class="proc-arrow" aria-hidden="true">&rarr;</span>
+    </div>
+    <div class="proc-card rv rv-d3">
+      <div class="proc-num">03</div>
+      <h3>맞춤 시술</h3>
+      <div class="proc-card-en">Treatment</div>
+      <p>프리미엄 제품만 사용하여 모발 손상을 최소화하며 시술합니다.</p>
+      <span class="proc-arrow" aria-hidden="true">&rarr;</span>
+    </div>
+    <div class="proc-card rv rv-d4">
+      <div class="proc-num">04</div>
+      <h3>애프터케어</h3>
+      <div class="proc-card-en">Aftercare</div>
+      <p>홈케어 가이드와 리터치 주기를 안내드리며, 지속적인 관리를 도와드립니다.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PRODUCTS — Premium brand lineup
+     ============================================================ -->
+<!-- PRODUCTS -->
+<section class="products rv" id="products">
+  <div class="prod-header"><div class="sec-label">Products</div><h2 class="sec-title">사용 제품</h2><p class="sec-desc">최상의 결과를 위해 세계적으로 검증된 프리미엄 제품만 사용합니다.</p></div>
+  <div class="prod-grid">
+    <div class="prod-card rv rv-d1">
+      <div class="prod-logo">O</div>
+      <h3>Olaplex</h3>
+      <div class="prod-card-sub">Bond Repair</div>
+      <p>모발 결합을 복원하는 특허 기술. 블리치, 컬러 시술 시 손상을 최소화합니다.</p>
+      <div class="prod-use"><span class="prod-tag">Color</span><span class="prod-tag">Bleach</span></div>
+    </div>
+    <div class="prod-card rv rv-d2">
+      <div class="prod-logo">K</div>
+      <h3>Kerastase</h3>
+      <div class="prod-card-sub">Luxury Haircare</div>
+      <p>파리 럭셔리 헤어케어 브랜드. 모질별 맞춤 트리트먼트 라인업.</p>
+      <div class="prod-use"><span class="prod-tag">Treatment</span><span class="prod-tag">Care</span></div>
+    </div>
+    <div class="prod-card rv rv-d3">
+      <div class="prod-logo">D</div>
+      <h3>Davines</h3>
+      <div class="prod-card-sub">Sustainable Beauty</div>
+      <p>이탈리아 친환경 브랜드. 자연 유래 성분으로 두피와 모발을 보호합니다.</p>
+      <div class="prod-use"><span class="prod-tag">Scalp</span><span class="prod-tag">Styling</span></div>
+    </div>
+    <div class="prod-card rv rv-d4">
+      <div class="prod-logo">A</div>
+      <h3>Aveda</h3>
+      <div class="prod-card-sub">Plant-Powered</div>
+      <p>식물 기반 헤어 컬러와 케어. 민감한 두피에도 안심하고 사용 가능합니다.</p>
+      <div class="prod-use"><span class="prod-tag">Color</span><span class="prod-tag">Sensitive</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- GALLERY — single filmstrip -->
 <section class="gallery rv" id="gallery">
   <div class="gal-header"><div class="sec-label">Gallery</div><h2 class="sec-title">스타일 갤러리</h2><div class="gal-count">Selected — 10 Works</div></div>
@@ -745,6 +2358,21 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
     <div class="gal-item gal-sq g9" data-cap="다운펌"><div class="g-inner"></div><div class="gal-overlay"><div><span class="gal-cap">다운펌</span><span class="gal-sub">Down Perm</span></div></div><span class="gal-num">09</span></div>
     <div class="gal-item gal-tall g10" data-cap="헤드스파"><div class="g-inner"></div><div class="gal-overlay"><div><span class="gal-cap">헤드스파</span><span class="gal-sub">Head Spa</span></div></div><span class="gal-num">10</span></div>
   </div>
+  
+  <div style="max-width:1100px;margin:36px auto 0;padding:0 48px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+    <div class="rv rv-d1" style="text-align:center;padding:20px">
+      <div style="font-family:var(--display);font-size:1.6rem;color:rgba(255,255,255,.08);margin-bottom:8px">2,400+</div>
+      <div style="font-family:var(--sans);font-size:.36rem;color:rgba(255,255,255,.25);letter-spacing:.16em;text-transform:uppercase">Completed Styles</div>
+    </div>
+    <div class="rv rv-d2" style="text-align:center;padding:20px">
+      <div style="font-family:var(--display);font-size:1.6rem;color:rgba(255,255,255,.08);margin-bottom:8px">15+</div>
+      <div style="font-family:var(--sans);font-size:.36rem;color:rgba(255,255,255,.25);letter-spacing:.16em;text-transform:uppercase">Product Brands</div>
+    </div>
+    <div class="rv rv-d3" style="text-align:center;padding:20px">
+      <div style="font-family:var(--display);font-size:1.6rem;color:rgba(255,255,255,.08);margin-bottom:8px">4.9</div>
+      <div style="font-family:var(--sans);font-size:.36rem;color:rgba(255,255,255,.25);letter-spacing:.16em;text-transform:uppercase">Average Rating</div>
+    </div>
+  </div>
   <div class="gal-cta-wrap rv"><a href="https://instagram.com/noir.salon" class="gal-cta" target="_blank" rel="noopener noreferrer">더 많은 스타일 보기 →</a></div>
 </section>
 
@@ -759,24 +2387,86 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   <span class="lb-caption" id="lbCap"></span>
 </div>
 
+
+
+<!-- MARQUEE 2 -->
+<div class="marquee rv" style="background:var(--bg)">
+  <div class="mq-inner">
+    <span class="mq-item">Layered<span class="mq-dot"></span>Balayage<span class="mq-dot"></span>Setting Perm<span class="mq-dot"></span>Volume Magic<span class="mq-dot"></span>Head Spa<span class="mq-dot"></span>Hush Cut<span class="mq-dot"></span>S-Curl<span class="mq-dot"></span>Keratin</span>
+    <span class="mq-item">Layered<span class="mq-dot"></span>Balayage<span class="mq-dot"></span>Setting Perm<span class="mq-dot"></span>Volume Magic<span class="mq-dot"></span>Head Spa<span class="mq-dot"></span>Hush Cut<span class="mq-dot"></span>S-Curl<span class="mq-dot"></span>Keratin</span>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     STYLE PORTFOLIO — Filtered before/after showcase
+     ============================================================ -->
+<!-- STYLE PORTFOLIO -->
+<section class="portfolio rv" id="portfolio">
+  <div class="pf-header"><div class="sec-label">Portfolio</div><h2 class="sec-title">스타일 포트폴리오</h2></div>
+  <div class="pf-filters" id="pfFilters">
+    <button class="pf-filter active" data-filter="all">All</button>
+    <button class="pf-filter" data-filter="cut">Cut</button>
+    <button class="pf-filter" data-filter="color">Color</button>
+    <button class="pf-filter" data-filter="perm">Perm</button>
+    <button class="pf-filter" data-filter="care">Care</button>
+  </div>
+  <div class="pf-grid" id="pfGrid">
+    <div class="pf-card" data-cat="cut" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">레이어드 허쉬컷</span><span class="pf-card-meta">이준혁 원장</span><div class="pf-card-tags"><span class="pf-card-tag">Cut</span><span class="pf-card-tag">여성</span></div></div></div></div>
+    <div class="pf-card" data-cat="color" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">애쉬 발레아쥬</span><span class="pf-card-meta">박서연 디자이너</span><div class="pf-card-tags"><span class="pf-card-tag">Color</span><span class="pf-card-tag">Balayage</span></div></div></div></div>
+    <div class="pf-card" data-cat="perm" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">내추럴 웨이브</span><span class="pf-card-meta">김하늘 디자이너</span><div class="pf-card-tags"><span class="pf-card-tag">Perm</span><span class="pf-card-tag">Setting</span></div></div></div></div>
+    <div class="pf-card" data-cat="cut" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">볼륨 숏컷</span><span class="pf-card-meta">이준혁 원장</span><div class="pf-card-tags"><span class="pf-card-tag">Cut</span><span class="pf-card-tag">Short</span></div></div></div></div>
+    <div class="pf-card" data-cat="color" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">하이라이트 믹스</span><span class="pf-card-meta">박서연 디자이너</span><div class="pf-card-tags"><span class="pf-card-tag">Color</span><span class="pf-card-tag">Highlight</span></div></div></div></div>
+    <div class="pf-card" data-cat="care" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">두피 디톡스</span><span class="pf-card-meta">김하늘 디자이너</span><div class="pf-card-tags"><span class="pf-card-tag">Care</span><span class="pf-card-tag">Scalp</span></div></div></div></div>
+    <div class="pf-card" data-cat="perm" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">S컬 디지털펌</span><span class="pf-card-meta">김하늘 디자이너</span><div class="pf-card-tags"><span class="pf-card-tag">Perm</span><span class="pf-card-tag">Digital</span></div></div></div></div>
+    <div class="pf-card" data-cat="cut" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1560869713-7d0a29430803?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">투블럭 페이드</span><span class="pf-card-meta">이준혁 원장</span><div class="pf-card-tags"><span class="pf-card-tag">Cut</span><span class="pf-card-tag">남성</span></div></div></div></div>
+    <div class="pf-card" data-cat="color" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">그레이시 브라운</span><span class="pf-card-meta">박서연 디자이너</span><div class="pf-card-tags"><span class="pf-card-tag">Color</span><span class="pf-card-tag">Natural</span></div></div></div></div>
+    <div class="pf-card" data-cat="care" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">프리미엄 클리닉</span><span class="pf-card-meta">박서연 디자이너</span><div class="pf-card-tags"><span class="pf-card-tag">Care</span><span class="pf-card-tag">Clinic</span></div></div></div></div>
+    <div class="pf-card" data-cat="perm" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">볼륨매직</span><span class="pf-card-meta">김하늘 디자이너</span><div class="pf-card-tags"><span class="pf-card-tag">Perm</span><span class="pf-card-tag">Straight</span></div></div></div></div>
+    <div class="pf-card" data-cat="cut" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">원랭스 보브</span><span class="pf-card-meta">이준혁 원장</span><div class="pf-card-tags"><span class="pf-card-tag">Cut</span><span class="pf-card-tag">Bob</span></div></div></div></div>
+
+    <div class="pf-card" data-cat="color" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">밀크 브라운</span><span class="pf-card-meta">박서연 디자이너</span><div class="pf-card-tags"><span class="pf-card-tag">Color</span><span class="pf-card-tag">Warm</span></div></div></div></div>
+    <div class="pf-card" data-cat="cut" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">C컬 레이어드</span><span class="pf-card-meta">이준혁 원장</span><div class="pf-card-tags"><span class="pf-card-tag">Cut</span><span class="pf-card-tag">Layer</span></div></div></div></div>
+    <div class="pf-card" data-cat="perm" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1560069513-5d4e966e7012?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">빌드펌</span><span class="pf-card-meta">김하늘 디자이너</span><div class="pf-card-tags"><span class="pf-card-tag">Perm</span><span class="pf-card-tag">Build</span></div></div></div></div>
+    <div class="pf-card" data-cat="care" data-hover="View"><div class="pf-card-img" style="background:url('https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=600&q=80') center/cover no-repeat"></div><div class="pf-card-overlay"><div><span class="pf-card-title">헤드스파 릴랙싱</span><span class="pf-card-meta">김하늘 디자이너</span><div class="pf-card-tags"><span class="pf-card-tag">Care</span><span class="pf-card-tag">Spa</span></div></div></div></div>
+  </div>
+</section>
+
 <!-- DESIGNERS (hair salon essential!) -->
 <section class="designers rv" id="designers">
   <div class="ds-header"><div class="sec-label">Designers</div><h2 class="sec-title">디자이너</h2></div>
   <div class="ds-grid">
-    <div class="art-card rv rv-d1" data-hover="Profile">
+    <div class="art-card rv rv-d1" data-hover="Profile" data-designer="0" tabindex="0" role="button" aria-label="이준혁 원장 상세 보기">
       <div class="art-img"><div class="art-img-inner ab1"></div>
         <div class="art-overlay"><div class="art-overlay-text">"머리카락 한 올 한 올이<br>그 사람의 인상을 만듭니다."</div></div></div>
       <div class="art-info"><h3>이준혁</h3><div class="art-role">Art Director · Founder</div><div class="art-tags"><span class="art-tag">커트</span><span class="art-tag">발레아쥬</span><span class="art-tag">15년</span></div></div>
     </div>
-    <div class="art-card rv rv-d2" data-hover="Profile">
+    <div class="art-card rv rv-d2" data-hover="Profile" data-designer="1" tabindex="0" role="button" aria-label="박서연 디자이너 상세 보기">
       <div class="art-img"><div class="art-img-inner ab2"></div>
         <div class="art-overlay"><div class="art-overlay-text">"컬러는 빛이에요.<br>같은 톤도 피부에 따라 완전히 달라지죠."</div></div></div>
       <div class="art-info"><h3>박서연</h3><div class="art-role">Color Specialist</div><div class="art-tags"><span class="art-tag">컬러</span><span class="art-tag">하이라이트</span><span class="art-tag">10년</span></div></div>
     </div>
-    <div class="art-card rv rv-d3" data-hover="Profile">
+    <div class="art-card rv rv-d3" data-hover="Profile" data-designer="2" tabindex="0" role="button" aria-label="김하늘 디자이너 상세 보기">
       <div class="art-img"><div class="art-img-inner ab3"></div>
         <div class="art-overlay"><div class="art-overlay-text">"스타일링이 쉬워야<br>진짜 좋은 머리예요."</div></div></div>
       <div class="art-info"><h3>김하늘</h3><div class="art-role">Top Designer</div><div class="art-tags"><span class="art-tag">펌</span><span class="art-tag">셋팅</span><span class="art-tag">8년</span></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIAL HIGHLIGHT -->
+<section class="rv" style="padding:80px 48px;background:var(--fg);color:var(--bg);text-align:center;position:relative;overflow:hidden">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--display);font-size:clamp(8rem,18vw,14rem);color:rgba(255,255,255,.015);letter-spacing:.2em;pointer-events:none;white-space:nowrap" aria-hidden="true">REVIEW</div>
+  <div style="max-width:680px;margin:0 auto;position:relative;z-index:1">
+    <div style="font-family:var(--display);font-size:clamp(3rem,6vw,5rem);color:rgba(255,255,255,.08);line-height:1;margin-bottom:24px">&ldquo;</div>
+    <p style="font-family:var(--display);font-size:clamp(1rem,2vw,1.4rem);font-weight:400;font-style:italic;line-height:2;color:rgba(255,255,255,.7);margin-bottom:20px">머리를 자르러 갔는데, 자신감을 찾고 왔어요.</p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px">
+      <div style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:.5rem;color:rgba(255,255,255,.3)">김</div>
+      <div>
+        <span style="font-family:var(--sans);font-size:.48rem;color:rgba(255,255,255,.5);letter-spacing:.06em">김** 님</span>
+        <span style="font-family:var(--sans);font-size:.34rem;color:rgba(255,255,255,.2);letter-spacing:.08em;display:block;margin-top:2px">5년 정기 고객</span>
+      </div>
     </div>
   </div>
 </section>
@@ -786,10 +2476,10 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   <div class="rv-header"><div class="sec-label">Reviews</div><h2 class="sec-title">고객 후기</h2></div>
   <div class="rv-slider">
     <div class="rv-track" id="rvTrack">
-      <div class="rv-card"><div class="rv-stars">★ ★ ★ ★ ★</div><p class="rv-text">준혁 원장님 커트는 진짜 다릅니다. 두상을 이렇게 잘 잡아주는 곳은 처음이에요. 5년째 다니고 있어요.</p><div class="rv-who"><div class="rv-avatar">김</div><div><span class="rv-name">김** 님</span><span class="rv-src">네이버 플레이스</span></div></div></div>
-      <div class="rv-card"><div class="rv-stars">★ ★ ★ ★ ★</div><p class="rv-text">발레아쥬 진짜 자연스러워요. 다른 데서 두 번이나 실패했는데 여기서 드디어 원하는 컬러 나왔어요.</p><div class="rv-who"><div class="rv-avatar">이</div><div><span class="rv-name">이** 님</span><span class="rv-src">카카오맵</span></div></div></div>
-      <div class="rv-card"><div class="rv-stars">★ ★ ★ ★ ★</div><p class="rv-text">헤드스파 받았는데 머리도 개운하고 두피 상태도 좋아졌어요. 공간도 조용하고 프라이빗해서 좋습니다.</p><div class="rv-who"><div class="rv-avatar">박</div><div><span class="rv-name">박** 님</span><span class="rv-src">Google</span></div></div></div>
-      <div class="rv-card"><div class="rv-stars">★ ★ ★ ★ ★</div><p class="rv-text">남자인데 여기 다운펌 최고예요. 뜨는 머리 때문에 고민이었는데, 한 달 넘게 유지돼서 만족합니다.</p><div class="rv-who"><div class="rv-avatar">최</div><div><span class="rv-name">최** 님</span><span class="rv-src">네이버 플레이스</span></div></div></div>
+      <div class="rv-card"><div class="rv-stars">★ ★ ★ ★ ★</div><div class="rv-badge" style="font-family:var(--sans);font-size:.3rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--border2);color:var(--dim);display:inline-block;margin-bottom:12px">Cut</div><p class="rv-text">준혁 원장님 커트는 진짜 다릅니다. 두상을 이렇게 잘 잡아주는 곳은 처음이에요. 5년째 다니고 있어요.</p><div class="rv-who"><div class="rv-avatar">김</div><div><span class="rv-name">김** 님</span><span class="rv-src">네이버 플레이스</span></div></div></div>
+      <div class="rv-card"><div class="rv-stars">★ ★ ★ ★ ★</div><div class="rv-badge" style="font-family:var(--sans);font-size:.3rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--border2);color:var(--dim);display:inline-block;margin-bottom:12px">Color</div><p class="rv-text">발레아쥬 진짜 자연스러워요. 다른 데서 두 번이나 실패했는데 여기서 드디어 원하는 컬러 나왔어요.</p><div class="rv-who"><div class="rv-avatar">이</div><div><span class="rv-name">이** 님</span><span class="rv-src">카카오맵</span></div></div></div>
+      <div class="rv-card"><div class="rv-stars">★ ★ ★ ★ ★</div><div class="rv-badge" style="font-family:var(--sans);font-size:.3rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--border2);color:var(--dim);display:inline-block;margin-bottom:12px">Head Spa</div><p class="rv-text">헤드스파 받았는데 머리도 개운하고 두피 상태도 좋아졌어요. 공간도 조용하고 프라이빗해서 좋습니다.</p><div class="rv-who"><div class="rv-avatar">박</div><div><span class="rv-name">박** 님</span><span class="rv-src">Google</span></div></div></div>
+      <div class="rv-card"><div class="rv-stars">★ ★ ★ ★ ★</div><div class="rv-badge" style="font-family:var(--sans);font-size:.3rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--border2);color:var(--dim);display:inline-block;margin-bottom:12px">Down Perm</div><p class="rv-text">남자인데 여기 다운펌 최고예요. 뜨는 머리 때문에 고민이었는데, 한 달 넘게 유지돼서 만족합니다.</p><div class="rv-who"><div class="rv-avatar">최</div><div><span class="rv-name">최** 님</span><span class="rv-src">네이버 플레이스</span></div></div></div>
     </div>
   </div>
   <div class="rv-controls">
@@ -810,14 +2500,96 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   </div>
 </section>
 
+
+
+<!-- ============================================================
+     HAIR CARE GUIDE — Home care tips
+     ============================================================ -->
+<!-- HAIR CARE GUIDE -->
+<section class="care-guide rv" id="care-guide">
+  <div class="cg-header"><div class="sec-label">Hair Care</div><h2 class="sec-title">홈케어 가이드</h2><p class="sec-desc">살롱에서의 시술만큼, 집에서의 관리가 중요합니다.</p></div>
+  <div class="cg-grid">
+    <div class="cg-card rv rv-d1" data-num="01">
+      <h3>컬러 유지</h3>
+      <div class="cg-card-en">Color Maintenance</div>
+      <p>시술 후 48시간은 샴푸를 피해 주세요. 컬러 전용 샴푸를 사용하면 색상 유지 기간이 2배 이상 늘어납니다.</p>
+      <div class="cg-tip"><span>Tip</span><p>3주 주기로 뿌리 리터치를 권장합니다.</p></div>
+    </div>
+    <div class="cg-card rv rv-d2" data-num="02">
+      <h3>펌 관리</h3>
+      <div class="cg-card-en">Perm Care</div>
+      <p>펌 후 48시간 동안 머리를 묶거나 강하게 빗지 마세요. 에센스를 충분히 바르고 자연 건조하는 것이 가장 좋습니다.</p>
+      <div class="cg-tip"><span>Tip</span><p>디퓨저를 사용하면 웨이브가 더 살아납니다.</p></div>
+    </div>
+    <div class="cg-card rv rv-d3" data-num="03">
+      <h3>두피 케어</h3>
+      <div class="cg-card-en">Scalp Care</div>
+      <p>주 1회 두피 스케일링 제품을 사용하면 모공 막힘을 예방할 수 있습니다. 샴푸 시 손끝으로 두피를 마사지해 주세요.</p>
+      <div class="cg-tip"><span>Tip</span><p>월 1회 살롱 두피 케어를 병행하면 효과적입니다.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CTA BANNER — Reservation call-to-action
+     ============================================================ -->
+<!-- CTA BANNER -->
+<section class="cta-banner rv" id="cta-banner">
+  <div class="cta-banner-inner">
+    <div class="sec-label">Reservation</div>
+    <h2>당신만의 스타일을 찾아보세요</h2>
+    <p>완전 예약제로 운영됩니다. 카카오톡 채널 또는 전화로 상담을 시작해 보세요.</p>
+    <div class="cta-btns">
+      <a href="https://pf.kakao.com/_zAqqX_noir" class="cta-btn-light" target="_blank" rel="noopener noreferrer">예약하기</a>
+      <a href="tel:02-000-0000" class="cta-btn-outline">전화문의 &rarr;</a>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="faq rv" id="faq">
   <div class="faq-header"><div class="sec-label">FAQ</div><h2 class="sec-title">자주 묻는 질문</h2></div>
   <div class="faq-list">
-    <div class="faq-item"><button class="faq-q"><span class="faq-q-label">Q1</span><span>예약은 어떻게 하나요?</span><span class="faq-q-icon"></span></button><div class="faq-a"><div class="faq-a-inner">카카오톡 채널(@noir)로 예약해 주세요. 원하시는 날짜, 시간, 디자이너를 말씀해 주시면 확인 후 안내드립니다.</div></div></div>
-    <div class="faq-item"><button class="faq-q"><span class="faq-q-label">Q2</span><span>시술 시간은 얼마나 걸리나요?</span><span class="faq-q-icon"></span></button><div class="faq-a"><div class="faq-a-inner">커트는 약 60분, 컬러/펌은 약 2~3시간 소요됩니다. 시술 내용에 따라 다르며, 예약 시 안내드립니다.</div></div></div>
-    <div class="faq-item"><button class="faq-q"><span class="faq-q-label">Q3</span><span>주차가 가능한가요?</span><span class="faq-q-icon"></span></button><div class="faq-a"><div class="faq-a-inner">건물 내 주차장 이용 가능합니다. 시술 시간에 따라 1~2시간 무료 주차 제공됩니다.</div></div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="faq-q-label">Q1</span><span>예약은 어떻게 하나요?</span><span class="faq-q-icon"></span></button><div class="faq-a"><div class="faq-a-inner">카카오톡 채널(@noir)로 예약해 주세요. 원하시는 날짜, 시간, 디자이너를 말씀해 주시면 확인 후 안내드립니다.</div></div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="faq-q-label">Q2</span><span>시술 시간은 얼마나 걸리나요?</span><span class="faq-q-icon"></span></button><div class="faq-a"><div class="faq-a-inner">커트는 약 60분, 컬러/펌은 약 2~3시간 소요됩니다. 시술 내용에 따라 다르며, 예약 시 안내드립니다.</div></div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false"><span class="faq-q-label">Q3</span><span>주차가 가능한가요?</span><span class="faq-q-icon"></span></button><div class="faq-a"><div class="faq-a-inner">건물 내 주차장 이용 가능합니다. 시술 시간에 따라 1~2시간 무료 주차 제공됩니다.</div></div></div>
     <div class="faq-item"><button class="faq-q"><span class="faq-q-label">Q4</span><span>염색 후 관리는 어떻게 하나요?</span><span class="faq-q-icon"></span></button><div class="faq-a"><div class="faq-a-inner">시술 후 2~3일은 샴푸를 피해 주세요. 컬러 전용 샴푸 사용을 권하며, 4주 후 뿌리 리터치를 추천드립니다.</div></div></div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PRESS & AWARDS — Recognition and media features
+     ============================================================ -->
+<!-- PRESS & AWARDS -->
+<section class="rv" id="press" style="padding:100px 48px;background:var(--bg2);border-top:1px solid var(--border)">
+  <div style="max-width:1100px;margin:0 auto;text-align:center">
+    <div class="sec-label" style="justify-content:center">Recognition</div>
+    <h2 class="sec-title">수상 및 미디어</h2>
+    <p class="sec-desc" style="max-width:480px;margin:0 auto 40px">누아르의 기술과 철학은 업계에서도 인정받고 있습니다.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+      <div class="rv rv-d1" style="padding:28px 20px;border:1px solid var(--border);background:var(--white);transition:all .5s var(--ease)">
+        <div style="font-family:var(--display);font-size:.85rem;color:var(--fg);margin-bottom:4px">2023</div>
+        <div style="font-family:var(--sans);font-size:.34rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim2);margin-bottom:10px;font-weight:300">Award</div>
+        <p style="font-size:.6rem;color:var(--dim);line-height:1.9;font-weight:200">헤어 트렌드 어워드<br>Best Hair Salon</p>
+      </div>
+      <div class="rv rv-d2" style="padding:28px 20px;border:1px solid var(--border);background:var(--white);transition:all .5s var(--ease)">
+        <div style="font-family:var(--display);font-size:.85rem;color:var(--fg);margin-bottom:4px">2023</div>
+        <div style="font-family:var(--sans);font-size:.34rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim2);margin-bottom:10px;font-weight:300">Media</div>
+        <p style="font-size:.6rem;color:var(--dim);line-height:1.9;font-weight:200">얼루어 코리아<br>청담동 추천 살롱</p>
+      </div>
+      <div class="rv rv-d3" style="padding:28px 20px;border:1px solid var(--border);background:var(--white);transition:all .5s var(--ease)">
+        <div style="font-family:var(--display);font-size:.85rem;color:var(--fg);margin-bottom:4px">2024</div>
+        <div style="font-family:var(--sans);font-size:.34rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim2);margin-bottom:10px;font-weight:300">Brand</div>
+        <p style="font-size:.6rem;color:var(--dim);line-height:1.9;font-weight:200">Olaplex 공식<br>파트너 살롱 선정</p>
+      </div>
+      <div class="rv rv-d4" style="padding:28px 20px;border:1px solid var(--border);background:var(--white);transition:all .5s var(--ease)">
+        <div style="font-family:var(--display);font-size:.85rem;color:var(--fg);margin-bottom:4px">2024</div>
+        <div style="font-family:var(--sans);font-size:.34rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim2);margin-bottom:10px;font-weight:300">Review</div>
+        <p style="font-size:.6rem;color:var(--dim);line-height:1.9;font-weight:200">네이버 플레이스<br>평점 4.9 달성</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -836,6 +2608,44 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   </div>
 </section>
 
+
+
+<!-- ============================================================
+     MEMBERSHIP — VIP tier benefits
+     ============================================================ -->
+<!-- MEMBERSHIP -->
+<section class="rv" id="membership" style="padding:120px 48px;background:var(--white);border-top:1px solid var(--border)">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="sec-label">Membership</div>
+    <h2 class="sec-title">멤버십 혜택</h2>
+    <p class="sec-desc" style="margin-bottom:40px">정기적으로 방문해 주시는 고객님께 드리는 특별한 혜택입니다.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <div class="rv rv-d1" style="border:1px solid var(--border);padding:36px 28px;text-align:center;transition:all .5s var(--ease);position:relative">
+        <div style="font-family:var(--display);font-size:1.2rem;margin-bottom:4px">Silver</div>
+        <div style="font-family:var(--sans);font-size:.34rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim2);margin-bottom:16px">3회 이상 방문</div>
+        <div style="border-top:1px solid var(--border);padding-top:16px">
+          <p style="font-size:.62rem;color:var(--dim);line-height:2.2;font-weight:200">앞머리 커트 무료<br>클리닉 10% 할인<br>생일 달 커트 10% 할인</p>
+        </div>
+      </div>
+      <div class="rv rv-d2" style="border:2px solid var(--fg);padding:36px 28px;text-align:center;transition:all .5s var(--ease);position:relative">
+        <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:.28rem;letter-spacing:.14em;text-transform:uppercase;padding:3px 10px;background:var(--fg);color:var(--bg)">Popular</div>
+        <div style="font-family:var(--display);font-size:1.2rem;margin-bottom:4px">Gold</div>
+        <div style="font-family:var(--sans);font-size:.34rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim2);margin-bottom:16px">6회 이상 방문</div>
+        <div style="border-top:1px solid var(--border);padding-top:16px">
+          <p style="font-size:.62rem;color:var(--dim);line-height:2.2;font-weight:200">Silver 혜택 전체 포함<br>모든 시술 5% 할인<br>신규 제품 우선 체험<br>디자이너 직통 예약</p>
+        </div>
+      </div>
+      <div class="rv rv-d3" style="border:1px solid var(--border);padding:36px 28px;text-align:center;transition:all .5s var(--ease);position:relative">
+        <div style="font-family:var(--display);font-size:1.2rem;margin-bottom:4px">Platinum</div>
+        <div style="font-family:var(--sans);font-size:.34rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim2);margin-bottom:16px">12회 이상 방문</div>
+        <div style="border-top:1px solid var(--border);padding-top:16px">
+          <p style="font-size:.62rem;color:var(--dim);line-height:2.2;font-weight:200">Gold 혜택 전체 포함<br>모든 시술 10% 할인<br>연 1회 헤드스파 무료<br>VIP 전용 예약 우선권<br>리터치 알림 서비스</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="ft-inner">
@@ -843,7 +2653,23 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
     <span class="ft-copy">&copy; <span id="yr">2025</span> NOIR — Hair Salon, Cheongdam</span>
     <div class="ft-right"><a href="https://instagram.com/noir.salon" class="ft-link" target="_blank" rel="noopener noreferrer">@noir.salon</a><a href="#hero" class="ft-top" title="맨 위로">↑</a></div>
   </div>
+
+    <div style="max-width:1100px;margin:0 auto;padding:16px 0 0;text-align:center">
+      <p style="font-family:var(--sans);font-size:.3rem;color:rgba(255,255,255,.08);letter-spacing:.06em;line-height:1.8">
+        본 사이트의 모든 이미지는 Unsplash 라이선스에 따라 사용되었습니다.
+        실제 시술 결과는 개인의 모질, 두상, 시술 이력에 따라 달라질 수 있습니다.
+        가격은 사전 공지 없이 변경될 수 있으며, 정확한 가격은 예약 시 안내드립니다.
+      </p>
+    </div>
 </footer>
+
+<!-- DESIGNER DETAIL OVERLAY -->
+<div class="ds-overlay" id="dsOverlay" role="dialog" aria-modal="true" aria-label="디자이너 상세">
+  <div class="ds-detail" id="dsDetail">
+    <button class="ds-detail-close" id="dsClose" aria-label="닫기">&times;</button>
+    <div id="dsContent"></div>
+  </div>
+</div>
 
 <!-- FLOATING -->
 <a href="#hero" class="back-top" id="backTop" aria-label="맨 위로">↑</a>
@@ -856,13 +2682,20 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
    JAVASCRIPT
    ============================================================ -->
 <script>
+
+/* ============================================================
+   JAVASCRIPT — Interactive Features
+   ============================================================ */
+
 /* COPYRIGHT YEAR */
 document.getElementById('yr').textContent=new Date().getFullYear();
+
 
 /* LOADER */
 const loader=document.getElementById('loader');
 window.addEventListener('load',()=>{setTimeout(()=>loader.classList.add('done'),2200)});
 document.body.style.overflow='hidden';setTimeout(()=>{document.body.style.overflow=''},2400);
+
 
 /* CURSOR */
 const isMob=window.matchMedia('(max-width:768px)').matches||'ontouchstart'in window;
@@ -886,11 +2719,13 @@ if(!isMob){
     el.addEventListener('mouseleave',()=>ring.classList.remove('nav-hover'))});
 }
 
+
 /* MOBILE MENU */
 const hbg=document.getElementById('hbg'),mobMenu=document.getElementById('mobMenu');
 function closeMob(){hbg.classList.remove('open');mobMenu.classList.remove('open');hbg.setAttribute('aria-expanded','false');document.body.style.overflow=''}
 hbg.onclick=()=>{const o=!mobMenu.classList.contains('open');hbg.classList.toggle('open',o);mobMenu.classList.toggle('open',o);hbg.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
 document.querySelectorAll('[data-close]').forEach(l=>l.addEventListener('click',closeMob));
+
 
 /* SCROLL */
 const navEl=document.getElementById('nav'),heroBg=document.getElementById('heroBg'),scrollBar=document.getElementById('scrollBar'),backTop=document.getElementById('backTop');
@@ -907,13 +2742,16 @@ function onScroll(){const sy=window.scrollY,docH=document.documentElement.scroll
   lastSy=sy;scrollTicking=false}
 window.addEventListener('scroll',()=>{if(!scrollTicking){requestAnimationFrame(onScroll);scrollTicking=true}},{passive:true});
 
+
 /* REVEAL */
 const revObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');revObs.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.rv,.rv-left,.rv-right,.rv-scale').forEach(el=>revObs.observe(el));
 
+
 /* COUNT UP */
 const countObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const el=e.target,t=+el.dataset.count;let c=0;const step=()=>{c+=Math.ceil(t/40);if(c>=t){el.textContent=t;return}el.textContent=c;setTimeout(step,40)};step();countObs.unobserve(el)}})},{threshold:.5});
 document.querySelectorAll('[data-count]').forEach(el=>countObs.observe(el));
+
 
 /* SERVICE TABS */
 document.querySelectorAll('.svc-tab').forEach(tab=>{tab.addEventListener('click',()=>{
@@ -922,9 +2760,11 @@ document.querySelectorAll('.svc-tab').forEach(tab=>{tab.addEventListener('click'
   tab.classList.add('active');
   document.getElementById('panel-'+tab.dataset.tab).classList.add('active')})});
 
+
 /* GALLERY INFINITE */
 const galStrip=document.getElementById('galStrip');
 [...galStrip.children].forEach(child=>galStrip.appendChild(child.cloneNode(true)));
+
 
 /* LIGHTBOX */
 const lb=document.getElementById('lb'),lbInner=document.getElementById('lbInner'),lbCounter=document.getElementById('lbCounter'),lbCap=document.getElementById('lbCap');
@@ -962,6 +2802,7 @@ document.getElementById('lbNext').onclick=()=>{lbIdx=(lbIdx+1)%lbItems.length;lb
 let lbTx=0;lb.addEventListener('touchstart',e=>{lbTx=e.touches[0].clientX},{passive:true});
 lb.addEventListener('touchend',e=>{const d=lbTx-e.changedTouches[0].clientX;if(Math.abs(d)>40){lbIdx=(lbIdx+(d>0?1:-1)+lbItems.length)%lbItems.length;lbShow()}},{passive:true});
 
+
 /* REVIEW CAROUSEL */
 const rvTrack=document.getElementById('rvTrack'),rvDotsWrap=document.getElementById('rvDots'),rvBarFill=document.getElementById('rvBarFill');
 const rvCards=rvTrack.children;let rvIdx=0;
@@ -977,29 +2818,35 @@ startRv();
 let rvTx=0;rvTrack.addEventListener('touchstart',e=>{rvTx=e.touches[0].clientX},{passive:true});
 rvTrack.addEventListener('touchend',e=>{const d=rvTx-e.changedTouches[0].clientX;if(Math.abs(d)>40){rvGo((rvIdx+(d>0?1:-1)+rvCards.length)%rvCards.length);resetRv()}},{passive:true});
 
+
 /* PAGE VISIBILITY */
 document.addEventListener('visibilitychange',()=>{
   if(document.hidden){clearInterval(rvAuto);cancelAnimationFrame(rvProg);document.querySelectorAll('.gal-strip,.mq-inner').forEach(el=>el.style.animationPlayState='paused')}
   else{resetRv();document.querySelectorAll('.gal-strip,.mq-inner').forEach(el=>el.style.animationPlayState='running')}});
 
 /* FAQ */
-document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.parentElement;const was=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));if(!was)item.classList.add('open')})});
+/* FAQ — see enhanced handler below */
+
 
 /* 3D TILT */
 if(!isMob){document.querySelectorAll('.art-card').forEach(card=>{card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(800px) rotateX(${-y*3}deg) rotateY(${x*3}deg)`});card.addEventListener('mouseleave',()=>{card.style.transform=''})})}
 
+
 /* MAGNETIC */
 if(!isMob){document.querySelectorAll('.hero-btn-fill,.nav-cta,.insta-btn').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();const x=e.clientX-r.left-r.width/2;const y=e.clientY-r.top-r.height/2;btn.style.transform=`translate(${x*.12}px,${y*.12}px)`});btn.addEventListener('mouseleave',()=>{btn.style.transform=''})})}
 
+
 /* SMOOTH ANCHOR */
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const h=this.getAttribute('href');if(h==='#')return;e.preventDefault();const t=document.querySelector(h);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+
 
 /* DARK MODE */
 const themeToggle=document.getElementById('themeToggle'),htmlEl=document.documentElement;
 function setTheme(dark){htmlEl.setAttribute('data-theme',dark?'dark':'light');themeToggle.textContent=dark?'☀':'☽';try{localStorage.setItem('noir-theme',dark?'dark':'light')}catch(e){}}
 (function(){let s=null;try{s=localStorage.getItem('noir-theme')}catch(e){}if(s==='dark')return setTheme(true);if(s==='light')return setTheme(false);if(window.matchMedia('(prefers-color-scheme:dark)').matches)return setTheme(true);setTheme(false)})();
-themeToggle.onclick=()=>setTheme(htmlEl.getAttribute('data-theme')!=='dark');
+themeToggle.onclick=()=>{const isDark=htmlEl.getAttribute('data-theme')!=='dark';setTheme(isDark);showThemeToast(isDark)};
 window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',e=>{let s=null;try{s=localStorage.getItem('noir-theme')}catch(ex){}if(!s)setTheme(e.matches)});
+
 
 /* SEC DOTS */
 const secDots=document.getElementById('secDots'),dotBtns=secDots.querySelectorAll('.sec-dot');
@@ -1008,21 +2855,51 @@ function updateDots(sy){secDots.classList.toggle('visible',sy>window.innerHeight
 requestAnimationFrame(()=>updateDots(window.scrollY));
 window.addEventListener('scroll',()=>updateDots(window.scrollY),{passive:true});
 
+
 /* TOAST */
 const toast=document.getElementById('toast');let toastShown=false;
 function showToast(){if(toastShown)return;toastShown=true;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),8000)}
 document.getElementById('toastClose').onclick=()=>toast.classList.remove('show');
 setTimeout(showToast,30000);
 
+
 /* ASSET PROTECTION */
 document.querySelectorAll('.hero-right-inner,.about-img,.art-img,.gal-item,.lb-inner,img').forEach(el=>{
   el.addEventListener('contextmenu',e=>e.preventDefault());
   el.addEventListener('dragstart',e=>e.preventDefault())});
 
+
 /* KEYBOARD */
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){if(lb.classList.contains('open')){lbHide();return}if(mobMenu.classList.contains('open')){closeMob();return}}
   if(lb.classList.contains('open')){if(e.key==='ArrowLeft')document.getElementById('lbPrev').click();if(e.key==='ArrowRight')document.getElementById('lbNext').click()}
+});
+
+
+/* WHY NOIR COUNTER ANIMATION */
+document.querySelectorAll('#why-noir [data-count]').forEach(el=>countObs.observe(el));
+
+
+/* SPACE IMAGE PROTECTION */
+document.querySelectorAll('#space [data-hover]').forEach(el=>{
+  el.addEventListener('contextmenu',e=>e.preventDefault());
+  el.addEventListener('dragstart',e=>e.preventDefault());
+});
+
+
+/* CURSOR HOVER for new sections */
+if(!isMob){
+  document.querySelectorAll('.pf-card[data-hover],.prod-card,.proc-card,#space [data-hover]').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{ring.classList.add('hover');curLabel.textContent=el.dataset.hover||'View';curLabel.classList.add('show')});
+    el.addEventListener('mouseleave',()=>{ring.classList.remove('hover');curLabel.classList.remove('show')})});
+  document.querySelectorAll('.cta-btn-light,.cta-btn-outline,.pf-filter,.ds-detail-cta,.ft-social-link,.ft-bottom-link').forEach(el=>{
+    el.addEventListener('mouseenter',()=>ring.classList.add('nav-hover'));
+    el.addEventListener('mouseleave',()=>ring.classList.remove('nav-hover'))});
+}
+
+/* INSTAGRAM THUMBS CLICK */
+document.querySelectorAll('.insta-thumb').forEach(el=>{
+  el.addEventListener('click',()=>{window.open('https://instagram.com/noir.salon','_blank','noopener,noreferrer')});
 });
 
 // 포트폴리오 프리뷰용 자동스크롤 (iframe 안에 있을 때만 작동)

@@ -72,125 +72,43 @@ animation:none!important}
 animation:none!important}
 
 /* ============================================================
-BRAND STORY — timeline + founding story
+BRAND STORY — immersive split
 ============================================================ */
-.story{
-padding:160px 48px;
-background:var(--bg2);
-border-top:1px solid var(--border)}
-
-.story-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
-
-.story-text .sec-desc{
-max-width:100%;
-margin-bottom:28px;
-font-size:.74rem;
-line-height:2.4;
-font-weight:200;
-}
-
-.story-highlight{
-font-family:var(--display);
-font-size:clamp(1.1rem,2vw,1.4rem);
-font-style:italic;
-color:var(--fg2);
-line-height:1.85;
-padding:24px 0 24px 24px;
-border-left:2px solid var(--border3);
-margin:32px 0;
-}
-
-.story-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:36px;padding-top:32px;border-top:1px solid var(--border2)}
+.story{padding:160px 48px;background:var(--bg2);border-top:1px solid var(--border)}
+.story-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.story-text .sec-desc{max-width:100%;font-size:.74rem;line-height:2.4;font-weight:200}
+.story-text .sec-desc+.sec-desc{margin-top:20px}
+.story-highlight{font-family:var(--display);font-size:clamp(1.15rem,2.2vw,1.5rem);font-style:italic;color:var(--fg2);line-height:1.85;padding:28px 0 28px 28px;border-left:2px solid var(--border3);margin:36px 0}
+.story-visual{position:relative}
+.story-img{aspect-ratio:4/5;overflow:hidden;position:relative}
+.story-img-bg{width:100%;height:100%;background:url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80') center/cover no-repeat;transition:transform .6s var(--ease)}
+.story-img:hover .story-img-bg{transform:scale(1.04)}
+.story-img::after{content:'';position:absolute;inset:0;border:1px solid var(--border2);pointer-events:none}
+.story-timeline{position:absolute;bottom:-1px;left:-1px;right:-1px;background:rgba(10,10,10,.88);backdrop-filter:blur(12px);padding:28px 32px;display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.story-yr{text-align:center;position:relative;padding-top:16px}
+.story-yr::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--border2)}
+.story-yr::after{content:'';position:absolute;top:-3px;left:50%;width:7px;height:7px;border-radius:50%;background:var(--dim3);transform:translateX(-50%);transition:background .4s var(--ease)}
+.story-yr.active::after{background:var(--fg);box-shadow:0 0 0 3px rgba(250,250,250,.08)}
+.story-yr-num{font-family:var(--display);font-size:.7rem;color:rgba(255,255,255,.5);display:block;margin-bottom:2px}
+.story-yr.active .story-yr-num{color:var(--fg)}
+.story-yr-desc{font-family:var(--sans);font-size:.28rem;color:rgba(255,255,255,.2);letter-spacing:.06em;display:block}
+.story-yr.active .story-yr-desc{color:rgba(255,255,255,.4)}
+.story-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px;padding-top:32px;border-top:1px solid var(--border2)}
 .story-stats .stat{border:1px solid var(--border2)}
 
-.timeline{
-position:relative;
-padding-left:28px}
-
-.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--border2)}
-.tl-item{position:relative;padding:0 0 40px;opacity:0;transform:translateY(16px);transition:all .6s var(--ease)}
-.tl-item.show{opacity:1;transform:none}
-.tl-item::before{content:'';position:absolute;left:-32px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--dim3);border:2px solid var(--bg2);transition:all .4s var(--ease)}
-.tl-item.show::before{background:var(--fg);box-shadow:0 0 0 4px rgba(250,250,250,.06)}
-
-.tl-year{
-font-family:var(--display);
-font-size:1.1rem;
-color:var(--fg);
-margin-bottom:6px;
-}
-
-.tl-desc{
-font-size:.7rem;
-color:var(--dim);
-line-height:2.2;
-font-weight:200;
-}
-
 /* ============================================================
-BOOKING PROCESS — 4 steps
+BOOKING PROCESS — horizontal flow
 ============================================================ */
-.process{
-padding:140px 48px;
-background:var(--bg)}
-
-.proc-header{
-max-width:1100px;
-margin:0 auto 52px}
-
-.proc-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-max-width:1100px;
-margin:0 auto;
-}
-
-.proc-card{
-background:var(--white);
-border:1px solid var(--border);
-padding:36px 28px;
-position:relative;
-transition:all .5s var(--ease);
-}
-
-.proc-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--fg);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
-.proc-card:hover{border-color:var(--border3);box-shadow:var(--shadow-sm);transform:translateY(-4px)}
-.proc-card:hover::after{transform:scaleX(1)}
-
-.proc-num{
-position:absolute;
-top:20px;
-right:20px;
-font-family:var(--display);
-font-size:2rem;
-color:var(--bg2);
-line-height:1;
-}
-
-.proc-card h3{
-font-family:var(--display);
-font-size:.95rem;
-font-weight:400;
-margin-bottom:4px;
-}
-
-.proc-card-en{
-font-family:var(--sans);
-font-size:.34rem;
-color:var(--dim2);
-letter-spacing:.14em;
-text-transform:uppercase;
-margin-bottom:14px;
-font-weight:300;
-}
-
-.proc-card p{
-font-size:.64rem;
-color:var(--dim);
-line-height:2.2;
-font-weight:200;
-}
+.process{padding:160px 48px;background:var(--bg)}
+.proc-header{max-width:1100px;margin:0 auto 56px}
+.proc-flow{display:flex;max-width:1100px;margin:0 auto;position:relative}
+.proc-flow::before{content:'';position:absolute;top:19px;left:20px;right:20px;height:1px;background:var(--border2)}
+.proc-step{flex:1;text-align:center;position:relative;padding:0 16px}
+.proc-dot{width:40px;height:40px;border-radius:50%;border:1px solid var(--border2);background:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;position:relative;z-index:1;font-family:var(--display);font-size:.7rem;color:var(--dim);transition:all .5s var(--ease)}
+.proc-step:hover .proc-dot{border-color:var(--fg);color:var(--fg);transform:scale(1.1);box-shadow:0 0 0 6px rgba(250,250,250,.03)}
+.proc-step h3{font-family:var(--display);font-size:.95rem;font-weight:400;margin-bottom:4px}
+.proc-step-en{font-family:var(--sans);font-size:.32rem;color:var(--dim2);letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;font-weight:300}
+.proc-step p{font-size:.68rem;color:var(--dim);line-height:2.2;font-weight:200;max-width:220px;margin:0 auto}
 
 
 /* ============================================================
@@ -525,56 +443,22 @@ text-transform:uppercase;
 }
 
 /* ============================================================
-HAIR CARE GUIDE
+HAIR CARE GUIDE — editorial layout
 ============================================================ */
-.care-guide{
-padding:140px 48px;
-background:var(--bg)}
-
-.cg-header{
-max-width:1100px;
-margin:0 auto 52px}
-
-.cg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto}
-.cg-card{background:var(--white);border:1px solid var(--border);padding:36px 28px;transition:all .5s var(--ease);position:relative}
-.cg-card::before{content:attr(data-num);position:absolute;top:20px;right:20px;font-family:var(--display);font-size:2rem;color:var(--bg2);line-height:1}
-
-.cg-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--fg);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
-.cg-card:hover{
-border-color:var(--border3);
-box-shadow:var(--shadow-sm);
-transform:translateY(-4px)}
-.cg-card:hover::after{transform:scaleX(1)}
-
-.cg-card h3{font-family:var(--display);font-size:.95rem;font-weight:400;margin-bottom:4px}
-
-.cg-card-en{
-font-family:var(--sans);
-font-size:.34rem;
-color:var(--dim2);
-letter-spacing:.14em;
-text-transform:uppercase;
-margin-bottom:14px;
-font-weight:300;
-}
-
-.cg-card p{
-font-size:.64rem;
-color:var(--dim);
-line-height:2.2;
-font-weight:200;
-}
-
-.cg-tip{
-margin-top:14px;
-padding-top:14px;
-border-top:1px solid var(--border)}
-
-.cg-tip span{font-family:var(--sans);font-size:.36rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim2);font-weight:400}
-
-.cg-tip p{
-font-size:.6rem;
-margin-top:4px}
+.care-guide{padding:160px 48px;background:var(--bg2);border-top:1px solid var(--border)}
+.cg-header{max-width:1100px;margin:0 auto 56px}
+.cg-list{max-width:1100px;margin:0 auto}
+.cg-item{display:grid;grid-template-columns:auto 1fr;gap:40px;padding:40px 0;border-bottom:1px solid var(--border2);align-items:start;transition:all .5s var(--ease)}
+.cg-item:first-child{padding-top:0}
+.cg-item:last-child{border-bottom:none;padding-bottom:0}
+.cg-num{font-family:var(--display);font-size:2.2rem;color:var(--bg3);line-height:1;min-width:52px;text-align:right;transition:color .5s var(--ease)}
+.cg-item:hover .cg-num{color:var(--dim)}
+.cg-body h3{font-family:var(--display);font-size:clamp(.95rem,1.4vw,1.15rem);font-weight:400;margin-bottom:6px}
+.cg-body-en{font-family:var(--sans);font-size:.34rem;color:var(--dim2);letter-spacing:.16em;text-transform:uppercase;font-weight:300;margin-bottom:16px}
+.cg-body p{font-size:.72rem;color:var(--dim);line-height:2.4;font-weight:200;max-width:680px}
+.cg-tip{margin-top:16px;padding:16px 20px;border-left:2px solid var(--border3)}
+.cg-tip span{font-family:var(--sans);font-size:.34rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim2);font-weight:400;display:block;margin-bottom:4px}
+.cg-tip p{font-size:.66rem;margin-top:0}
 
 /* ============================================================
 CTA BANNER
@@ -1657,7 +1541,7 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
    WIDESCREEN ≥1500
    ============================================================ */
 @media(min-width:1500px){
-  .story-inner,.proc-grid,.prod-grid,.pf-grid,.cg-grid,.cta-banner-inner{max-width:1200px}
+  .story-inner,.proc-flow,.prod-grid,.pf-grid,.cg-list,.cta-banner-inner{max-width:1200px}
   .story,.process,.products,.portfolio,.care-guide,.cta-banner{padding-left:calc((100vw - 1200px)/2);padding-right:calc((100vw - 1200px)/2)}
   .services,.reviews,.designers,.info,.faq{padding-left:calc((100vw - 1200px)/2);padding-right:calc((100vw - 1200px)/2)}
   .about{max-width:1200px}
@@ -1670,11 +1554,10 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   .hero{grid-template-columns:1fr}.hero-right{display:none}.hero-left{padding:120px 36px 80px}.hero-num{display:none}
   .about{grid-template-columns:1fr 1fr;gap:48px;padding:120px 36px}.about-circle{display:none}
   .ds-grid{grid-template-columns:repeat(2,1fr)}
-  .story-inner{grid-template-columns:1fr;gap:40px}
-  .proc-grid{grid-template-columns:repeat(2,1fr)}
+  .story-inner{grid-template-columns:1fr;gap:40px}.story-img{aspect-ratio:16/10}
+  .proc-flow{flex-wrap:wrap}.proc-step{flex:0 0 calc(50% - 8px)}
   .prod-grid{grid-template-columns:repeat(2,1fr)}
   .pf-grid{grid-template-columns:repeat(3,1fr)}
-  .cg-grid{grid-template-columns:repeat(2,1fr)}
   .ft-grid{grid-template-columns:repeat(2,1fr);gap:28px}
   #space [style*="grid-template-columns:2fr"]{grid-template-columns:1fr 1fr!important}
   #space [style*="grid-row"]{grid-row:auto!important}
@@ -1733,8 +1616,9 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   .ft-inner{flex-direction:column;gap:10px;text-align:center}
   .kakao-float{display:none}.mob-bar{display:block}
   .mob-link::after{display:none}
-  .story{padding:80px 20px}.story-inner{grid-template-columns:1fr;gap:28px}
-  .process{padding:80px 20px}.proc-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .story{padding:80px 20px}.story-inner{grid-template-columns:1fr;gap:32px}.story-timeline{position:relative;bottom:auto;left:auto;right:auto;padding:20px 16px;grid-template-columns:repeat(5,1fr)}.story-img{aspect-ratio:16/9}
+  .process{padding:80px 20px}.proc-flow{flex-direction:column;gap:32px}.proc-flow::before{display:none}.proc-step{text-align:left;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:0}.proc-dot{margin:0}.proc-step p{max-width:none}
+  .care-guide{padding:80px 20px}.cg-item{grid-template-columns:1fr;gap:12px}.cg-num{text-align:left;font-size:1.6rem}
   .products{padding:80px 20px}.prod-grid{grid-template-columns:1fr 1fr;gap:12px}
   .portfolio{padding:80px 20px}.pf-grid{grid-template-columns:repeat(2,1fr);gap:2px}
   .pf-filters{gap:4px;margin-bottom:20px}.pf-filter{font-size:.38rem;padding:6px 12px}
@@ -1774,7 +1658,7 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
 /* a11y */
 *:focus{outline:none}
 *:focus-visible{outline:2px solid var(--fg);outline-offset:3px;border-radius:2px}
-.pf-filter:focus-visible,.proc-card:focus-visible,.prod-card:focus-visible,.cg-card:focus-visible,.cta-btn-light:focus-visible,.cta-btn-outline:focus-visible,.ds-detail-cta:focus-visible,.ft-social-link:focus-visible,.ft-bottom-link:focus-visible,.insta-thumb:focus-visible{outline:2px solid var(--fg);outline-offset:3px;border-radius:2px}
+.pf-filter:focus-visible,.proc-step:focus-visible,.prod-card:focus-visible,.cg-item:focus-visible,.cta-btn-light:focus-visible,.cta-btn-outline:focus-visible,.ds-detail-cta:focus-visible,.ft-social-link:focus-visible,.ft-bottom-link:focus-visible,.insta-thumb:focus-visible{outline:2px solid var(--fg);outline-offset:3px;border-radius:2px}
 .skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:12px 24px;z-index:99999;font-size:.7rem;letter-spacing:.1em;text-decoration:none;transition:top .3s}
 .skip-link:focus{top:12px}
 
@@ -1782,7 +1666,7 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .loader{transition:none}.mq-inner{animation:none!important}.gal-strip{animation:none!important}.scroll-line::after{animation:none!important}.hero-glow,.hero-dust{display:none!important}.hero-right-inner{animation:none!important}
-  .tl-item,.pf-card,.cg-card,.proc-card,.prod-card{opacity:1!important;transform:none!important}
+  .tl-item,.pf-card,.cg-item,.proc-step,.prod-card{opacity:1!important;transform:none!important}
 }
 
 /* print */
@@ -1946,26 +1830,31 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
 
 
 
-<!-- BRAND STORY (통합: about에 포함) -->
+<!-- BRAND STORY -->
 <section class="story rv" id="story">
   <div class="story-inner">
     <div class="story-text rv-left">
       <div class="sec-label">Our Story</div>
       <h2 class="sec-title">NOIR의 이야기</h2>
       <p class="sec-desc">2018년, 단 두 평의 작은 공간에서 시작된 누아르는 '진짜 어울리는 머리'에 대한 고집 하나로 청담동까지 오게 되었습니다.</p>
-      <div class="story-highlight">"유행을 따르지 않겠다는 건, 더 깊이 고민하겠다는 뜻입니다."</div>
+      <div class="story-highlight">"유행을 따르지 않겠다는 건,<br>더 깊이 고민하겠다는 뜻입니다."</div>
       <p class="sec-desc">모든 고객의 두상, 모질, 라이프스타일을 분석하여 가장 자연스러운 스타일을 제안합니다. 하루 8명 한정, 완전 예약제로 운영하는 이유입니다.</p>
       <div class="story-stats rv rv-d2">
         <div class="stat"><span class="stat-num" data-count="87">0</span><span class="stat-label">재방문율 (%)</span></div>
         <div class="stat"><span class="stat-num" data-count="2400">0</span><span class="stat-label">누적 시술 (건)</span></div>
       </div>
     </div>
-    <div class="timeline rv-right">
-      <div class="tl-item rv rv-d1"><div class="tl-year">2018</div><div class="tl-desc">강남구 신사동 소규모 살롱 오픈. 커트 전문으로 시작.</div></div>
-      <div class="tl-item rv rv-d2"><div class="tl-year">2019</div><div class="tl-desc">청담동으로 이전. 프라이빗 살롱 콘셉트 확립.</div></div>
-      <div class="tl-item rv rv-d3"><div class="tl-year">2021</div><div class="tl-desc">디자이너 3인 체제. 컬러 및 펌 전문가 영입.</div></div>
-      <div class="tl-item rv rv-d4"><div class="tl-year">2023</div><div class="tl-desc">헤어 트렌드 어워드 수상. 프리미엄 브랜드 협업 시작.</div></div>
-      <div class="tl-item rv"><div class="tl-year">현재</div><div class="tl-desc">하루 8명 한정, 완전 예약제. 재방문율 87%.</div></div>
+    <div class="story-visual rv-right">
+      <div class="story-img" data-hover="Our Space">
+        <div class="story-img-bg"></div>
+      </div>
+      <div class="story-timeline">
+        <div class="story-yr"><span class="story-yr-num">2018</span><span class="story-yr-desc">오픈</span></div>
+        <div class="story-yr"><span class="story-yr-num">2019</span><span class="story-yr-desc">청담 이전</span></div>
+        <div class="story-yr"><span class="story-yr-num">2021</span><span class="story-yr-desc">3인 체제</span></div>
+        <div class="story-yr"><span class="story-yr-num">2023</span><span class="story-yr-desc">어워드</span></div>
+        <div class="story-yr active"><span class="story-yr-num">현재</span><span class="story-yr-desc">8명 한정</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -2032,33 +1921,30 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
      ============================================================ -->
 <!-- BOOKING PROCESS -->
 <section class="process rv" id="process">
-  <div class="proc-header"><div class="sec-label">Process</div><h2 class="sec-title">예약 프로세스</h2></div>
-  <div class="proc-grid">
-    <div class="proc-card rv rv-d1">
-      <div class="proc-num">01</div>
+  <div class="proc-header"><div class="sec-label">Process</div><h2 class="sec-title">예약 프로세스</h2><p class="sec-desc">카카오톡 예약부터 애프터케어까지, 네 단계로 완성됩니다.</p></div>
+  <div class="proc-flow">
+    <div class="proc-step rv rv-d1">
+      <div class="proc-dot">01</div>
       <h3>상담 예약</h3>
-      <div class="proc-card-en">Reservation</div>
+      <div class="proc-step-en">Reservation</div>
       <p>카카오톡 채널 또는 전화로 원하시는 날짜, 시간, 디자이너를 선택해 주세요.</p>
-
     </div>
-    <div class="proc-card rv rv-d2">
-      <div class="proc-num">02</div>
+    <div class="proc-step rv rv-d2">
+      <div class="proc-dot">02</div>
       <h3>스타일 상담</h3>
-      <div class="proc-card-en">Consultation</div>
+      <div class="proc-step-en">Consultation</div>
       <p>얼굴형, 모질, 라이프스타일을 분석하여 최적의 스타일을 함께 찾아드립니다.</p>
-
     </div>
-    <div class="proc-card rv rv-d3">
-      <div class="proc-num">03</div>
+    <div class="proc-step rv rv-d3">
+      <div class="proc-dot">03</div>
       <h3>맞춤 시술</h3>
-      <div class="proc-card-en">Treatment</div>
+      <div class="proc-step-en">Treatment</div>
       <p>프리미엄 제품만 사용하여 모발 손상을 최소화하며 시술합니다.</p>
-
     </div>
-    <div class="proc-card rv rv-d4">
-      <div class="proc-num">04</div>
+    <div class="proc-step rv rv-d4">
+      <div class="proc-dot">04</div>
       <h3>애프터케어</h3>
-      <div class="proc-card-en">Aftercare</div>
+      <div class="proc-step-en">Aftercare</div>
       <p>홈케어 가이드와 리터치 주기를 안내드리며, 지속적인 관리를 도와드립니다.</p>
     </div>
   </div>
@@ -2206,24 +2092,33 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
 <!-- HAIR CARE GUIDE -->
 <section class="care-guide rv" id="care-guide">
   <div class="cg-header"><div class="sec-label">Hair Care</div><h2 class="sec-title">홈케어 가이드</h2><p class="sec-desc">살롱에서의 시술만큼, 집에서의 관리가 중요합니다.</p></div>
-  <div class="cg-grid">
-    <div class="cg-card rv rv-d1" data-num="01">
-      <h3>컬러 유지</h3>
-      <div class="cg-card-en">Color Maintenance</div>
-      <p>시술 후 48시간은 샴푸를 피해 주세요. 컬러 전용 샴푸를 사용하면 색상 유지 기간이 2배 이상 늘어납니다.</p>
-      <div class="cg-tip"><span>Tip</span><p>3주 주기로 뿌리 리터치를 권장합니다.</p></div>
+  <div class="cg-list">
+    <div class="cg-item rv rv-d1">
+      <div class="cg-num">01</div>
+      <div class="cg-body">
+        <h3>컬러 유지</h3>
+        <div class="cg-body-en">Color Maintenance</div>
+        <p>시술 후 48시간은 샴푸를 피해 주세요. 컬러 전용 샴푸를 사용하면 색상 유지 기간이 2배 이상 늘어납니다.</p>
+        <div class="cg-tip"><span>Tip</span><p>3주 주기로 뿌리 리터치를 권장합니다.</p></div>
+      </div>
     </div>
-    <div class="cg-card rv rv-d2" data-num="02">
-      <h3>펌 관리</h3>
-      <div class="cg-card-en">Perm Care</div>
-      <p>펌 후 48시간 동안 머리를 묶거나 강하게 빗지 마세요. 에센스를 충분히 바르고 자연 건조하는 것이 가장 좋습니다.</p>
-      <div class="cg-tip"><span>Tip</span><p>디퓨저를 사용하면 웨이브가 더 살아납니다.</p></div>
+    <div class="cg-item rv rv-d2">
+      <div class="cg-num">02</div>
+      <div class="cg-body">
+        <h3>펌 관리</h3>
+        <div class="cg-body-en">Perm Care</div>
+        <p>펌 후 48시간 동안 머리를 묶거나 강하게 빗지 마세요. 에센스를 충분히 바르고 자연 건조하는 것이 가장 좋습니다.</p>
+        <div class="cg-tip"><span>Tip</span><p>디퓨저를 사용하면 웨이브가 더 살아납니다.</p></div>
+      </div>
     </div>
-    <div class="cg-card rv rv-d3" data-num="03">
-      <h3>두피 케어</h3>
-      <div class="cg-card-en">Scalp Care</div>
-      <p>주 1회 두피 스케일링 제품을 사용하면 모공 막힘을 예방할 수 있습니다. 샴푸 시 손끝으로 두피를 마사지해 주세요.</p>
-      <div class="cg-tip"><span>Tip</span><p>월 1회 살롱 두피 케어를 병행하면 효과적입니다.</p></div>
+    <div class="cg-item rv rv-d3">
+      <div class="cg-num">03</div>
+      <div class="cg-body">
+        <h3>두피 케어</h3>
+        <div class="cg-body-en">Scalp Care</div>
+        <p>주 1회 두피 스케일링 제품을 사용하면 모공 막힘을 예방할 수 있습니다. 샴푸 시 손끝으로 두피를 마사지해 주세요.</p>
+        <div class="cg-tip"><span>Tip</span><p>월 1회 살롱 두피 케어를 병행하면 효과적입니다.</p></div>
+      </div>
     </div>
   </div>
 </section>
@@ -2519,7 +2414,7 @@ document.querySelectorAll('#space [data-hover]').forEach(el=>{
 
 /* CURSOR HOVER for new sections */
 if(!isMob){
-  document.querySelectorAll('.pf-card[data-hover],.prod-card,.proc-card,#space [data-hover]').forEach(el=>{
+  document.querySelectorAll('.pf-card[data-hover],.prod-card,.proc-step,#space [data-hover]').forEach(el=>{
     el.addEventListener('mouseenter',()=>{ring.classList.add('hover');curLabel.textContent=el.dataset.hover||'View';curLabel.classList.add('show')});
     el.addEventListener('mouseleave',()=>{ring.classList.remove('hover');curLabel.classList.remove('show')})});
   document.querySelectorAll('.cta-btn-light,.cta-btn-outline,.pf-filter,.ds-detail-cta,.ft-social-link,.ft-bottom-link').forEach(el=>{

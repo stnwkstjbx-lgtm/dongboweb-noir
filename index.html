@@ -65,18 +65,26 @@ body{font-family:var(--body);background:var(--bg);color:var(--fg);font-size:15px
 .sec-desc{color:var(--fg3);font-size:15px;line-height:1.8;max-width:540px}
 
 /* ===== PRELOADER ===== */
-.preloader{position:fixed;inset:0;z-index:9999;background:var(--fg);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .6s var(--ease),visibility .6s}
-.preloader.done{opacity:0;visibility:hidden;pointer-events:none}
-.preloader-title{display:flex;gap:4px;margin-bottom:16px}
-.preloader-title span{font-family:var(--display);font-size:clamp(36px,6vw,56px);color:var(--bg);opacity:0;animation:plIn .5s var(--ease) forwards}
-.preloader-title span:nth-child(1){animation-delay:.1s}
-.preloader-title span:nth-child(2){animation-delay:.25s}
-.preloader-title span:nth-child(3){animation-delay:.4s}
-.preloader-title span:nth-child(4){animation-delay:.55s}
-.preloader-sub{font-family:var(--sans);font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--dim);opacity:0;animation:plIn .5s var(--ease) .7s forwards}
-.preloader-line{width:60px;height:1px;background:var(--dim);margin-top:24px;transform:scaleX(0);animation:plLine 1s var(--ease) .9s forwards}
-@keyframes plIn{to{opacity:1}}
-@keyframes plLine{to{transform:scaleX(1)}}
+.preloader{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center}
+.pl-panel{position:absolute;left:0;right:0;background:var(--fg);transition:transform 1s cubic-bezier(.76,0,.24,1)}
+.pl-panel-top{top:0;height:50%;transform-origin:top}
+.pl-panel-bot{bottom:0;height:50%;transform-origin:bottom}
+.preloader.done .pl-panel-top{transform:translateY(-100%)}
+.preloader.done .pl-panel-bot{transform:translateY(100%)}
+.pl-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;pointer-events:none}
+.pl-logo{display:flex;gap:2px;margin-bottom:12px;overflow:hidden}
+.pl-logo span{font-family:var(--display);font-size:clamp(48px,8vw,80px);color:var(--bg);display:inline-block;transform:translateY(100%);animation:plCharUp .6s var(--ease) forwards}
+.pl-logo span:nth-child(1){animation-delay:.15s}
+.pl-logo span:nth-child(2){animation-delay:.25s}
+.pl-logo span:nth-child(3){animation-delay:.35s}
+.pl-logo span:nth-child(4){animation-delay:.45s}
+@keyframes plCharUp{to{transform:translateY(0)}}
+.pl-sub{font-family:var(--sans);font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--dim);opacity:0;animation:plFade .5s var(--ease) .7s forwards}
+.pl-count{font-family:var(--sans);font-size:11px;letter-spacing:3px;color:var(--dim2);margin-top:28px;opacity:0;animation:plFade .4s var(--ease) .5s forwards}
+.pl-bar{width:120px;height:1px;background:var(--fg3);margin-top:16px;position:relative;overflow:hidden;opacity:0;animation:plFade .4s var(--ease) .6s forwards}
+.pl-bar-fill{position:absolute;top:0;left:0;height:100%;width:0;background:var(--bg);transition:width .05s linear}
+.preloader.done .pl-content{opacity:0;transform:scale(.95);transition:all .4s var(--ease)}
+@keyframes plFade{to{opacity:1}}
 
 /* ===== CUSTOM CURSOR ===== */
 .cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9998;border-radius:50%;transition:opacity .3s}
@@ -469,9 +477,14 @@ br{display:none}
 
 <!-- ===== PRELOADER ===== -->
 <div class="preloader" id="preloader" aria-hidden="true">
-<div class="preloader-title"><span>N</span><span>O</span><span>I</span><span>R</span></div>
-<div class="preloader-sub">Hair Salon &middot; Cheongdam</div>
-<div class="preloader-line"></div>
+<div class="pl-panel pl-panel-top"></div>
+<div class="pl-panel pl-panel-bot"></div>
+<div class="pl-content">
+<div class="pl-logo"><span>N</span><span>O</span><span>I</span><span>R</span></div>
+<div class="pl-sub">Hair Salon &middot; Cheongdam</div>
+<div class="pl-count" id="plCount">0</div>
+<div class="pl-bar"><div class="pl-bar-fill" id="plBar"></div></div>
+</div>
 </div>
 
 <!-- ===== CUSTOM CURSOR ===== -->
@@ -809,8 +822,11 @@ br{display:none}
 <!-- ===== JAVASCRIPT ===== -->
 <script>
 (function(){'use strict';
-var preloader=document.getElementById('preloader');
-setTimeout(function(){preloader.classList.add('done')},2200);
+var preloader=document.getElementById('preloader'),plCount=document.getElementById('plCount'),plBar=document.getElementById('plBar');
+var plStart=Date.now(),plDur=2000;
+(function plTick(){var p=Math.min((Date.now()-plStart)/plDur,1);var eased=1-Math.pow(1-p,3);
+plCount.textContent=Math.round(eased*100);plBar.style.width=eased*100+'%';
+if(p<1)requestAnimationFrame(plTick);else setTimeout(function(){preloader.classList.add('done')},300)})();
 
 var themeToggle=document.getElementById('themeToggle');
 var themeIcon=document.getElementById('themeIcon');

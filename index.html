@@ -72,31 +72,6 @@ animation:none!important}
 animation:none!important}
 
 /* ============================================================
-BRAND STORY — immersive split
-============================================================ */
-.story{padding:160px 48px;background:var(--bg2);border-top:1px solid var(--border)}
-.story-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.story-text .sec-desc{max-width:100%;font-size:.74rem;line-height:2.4;font-weight:200}
-.story-text .sec-desc+.sec-desc{margin-top:20px}
-.story-highlight{font-family:var(--display);font-size:clamp(1.15rem,2.2vw,1.5rem);font-style:italic;color:var(--fg2);line-height:1.85;padding:28px 0 28px 28px;border-left:2px solid var(--border3);margin:36px 0}
-.story-visual{position:relative}
-.story-img{aspect-ratio:3/4;overflow:hidden;position:relative}
-.story-img-bg{width:100%;height:100%;background:url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80') center/cover no-repeat;transition:transform .6s var(--ease)}
-.story-img:hover .story-img-bg{transform:scale(1.04)}
-.story-img::after{content:'';position:absolute;inset:0;border:1px solid var(--border2);pointer-events:none}
-.story-timeline{background:var(--bg3);padding:24px 28px;display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:1px}
-.story-yr{text-align:center;position:relative;padding-top:16px}
-.story-yr::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--border2)}
-.story-yr::after{content:'';position:absolute;top:-3px;left:50%;width:7px;height:7px;border-radius:50%;background:var(--dim3);transform:translateX(-50%);transition:background .4s var(--ease)}
-.story-yr.active::after{background:var(--fg);box-shadow:0 0 0 3px var(--bg2)}
-.story-yr-num{font-family:var(--display);font-size:.7rem;color:var(--dim3);display:block;margin-bottom:2px}
-.story-yr.active .story-yr-num{color:var(--fg)}
-.story-yr-desc{font-family:var(--sans);font-size:.28rem;color:var(--dim3);letter-spacing:.06em;display:block}
-.story-yr.active .story-yr-desc{color:var(--dim)}
-.story-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px;padding-top:32px;border-top:1px solid var(--border2)}
-.story-stats .stat{border:1px solid var(--border2)}
-
-/* ============================================================
 BOOKING PROCESS — horizontal flow
 ============================================================ */
 .process{padding:160px 48px;background:var(--bg)}
@@ -1520,7 +1495,6 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
 [data-theme="dark"] .hbg s{background:var(--fg)}
 [data-theme="dark"] .footer-enhanced{background:#050505}
 [data-theme="dark"] .cta-banner{background:#050505}
-[data-theme="dark"] .story .tl-item::before{border-color:var(--bg2)}
 .theme-toggle{position:fixed;top:24px;right:108px;z-index:201;width:32px;height:32px;border-radius:50%;border:1px solid var(--border2);background:var(--white);display:flex;align-items:center;justify-content:center;transition:all .4s var(--ease);font-size:.65rem;line-height:1;opacity:.45;cursor:pointer}
 .theme-toggle:hover{opacity:1;border-color:var(--fg);transform:scale(1.1)}
 
@@ -1541,8 +1515,8 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
    WIDESCREEN ≥1500
    ============================================================ */
 @media(min-width:1500px){
-  .story-inner,.proc-flow,.prod-grid,.pf-grid,.cg-list,.cta-banner-inner{max-width:1200px}
-  .story,.process,.products,.portfolio,.care-guide,.cta-banner{padding-left:calc((100vw - 1200px)/2);padding-right:calc((100vw - 1200px)/2)}
+  .proc-flow,.prod-grid,.pf-grid,.cg-list,.cta-banner-inner{max-width:1200px}
+  .process,.products,.portfolio,.care-guide,.cta-banner{padding-left:calc((100vw - 1200px)/2);padding-right:calc((100vw - 1200px)/2)}
   .services,.reviews,.designers,.info,.faq{padding-left:calc((100vw - 1200px)/2);padding-right:calc((100vw - 1200px)/2)}
   .about{max-width:1200px}
 }
@@ -1554,7 +1528,6 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   .hero{grid-template-columns:1fr}.hero-right{display:none}.hero-left{padding:120px 36px 80px}.hero-num{display:none}
   .about{grid-template-columns:1fr 1fr;gap:48px;padding:120px 36px}.about-circle{display:none}
   .ds-grid{grid-template-columns:repeat(2,1fr)}
-  .story-inner{grid-template-columns:1fr;gap:40px}.story-img{aspect-ratio:16/9}
   .proc-flow{flex-wrap:wrap}.proc-step{flex:0 0 calc(50% - 8px)}
   .prod-grid{grid-template-columns:repeat(2,1fr)}
   .pf-grid{grid-template-columns:repeat(3,1fr)}
@@ -1616,7 +1589,6 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   .ft-inner{flex-direction:column;gap:10px;text-align:center}
   .kakao-float{display:none}.mob-bar{display:block}
   .mob-link::after{display:none}
-  .story{padding:80px 20px}.story-inner{grid-template-columns:1fr;gap:32px}.story-timeline{padding:20px 16px}.story-img{aspect-ratio:16/9}
   .process{padding:80px 20px}.proc-flow{flex-direction:column;gap:32px}.proc-flow::before{display:none}.proc-step{text-align:left;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:0}.proc-dot{margin:0}.proc-step p{max-width:none}
   .care-guide{padding:80px 20px}.cg-item{grid-template-columns:1fr;gap:12px}.cg-num{text-align:left;font-size:1.6rem}
   .products{padding:80px 20px}.prod-grid{grid-template-columns:1fr 1fr;gap:12px}
@@ -1809,53 +1781,22 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-text rv-left">
-    <div class="sec-label">About Us</div>
+    <div class="sec-label">About NOIR</div>
     <p class="about-quote">유행보다<br><em>어울림을 먼저.</em></p>
-    <p class="about-body">누아르는 2019년 청담동에서 시작한 프라이빗 헤어살롱입니다. 고객 한 분 한 분의 두상, 모질, 라이프스타일을 분석하여 가장 어울리는 스타일을 제안합니다. 트렌드를 쫓기보다, 일상에서 유지 가능한 아름다움을 추구합니다.</p>
+    <p class="about-body">2018년, 단 두 평의 작은 공간에서 시작된 누아르는 '진짜 어울리는 머리'에 대한 고집 하나로 청담동까지 오게 되었습니다. 고객 한 분 한 분의 두상, 모질, 라이프스타일을 분석하여 가장 어울리는 스타일을 제안합니다.</p>
     <p class="about-body">세계적으로 검증된 프리미엄 제품만 사용하며, 모발 손상을 최소화하는 시술 방식을 고집합니다. 하루 8명 한정, 완전 예약제로 운영하여 한 분 한 분에게 충분한 시간을 드리고 있습니다.</p>
     <div class="about-stats rv rv-d2">
-      <div class="stat"><span class="stat-num" data-count="8">0</span><span class="stat-label">하루 예약 (명)</span></div>
-      <div class="stat"><span class="stat-num" data-count="60">0</span><span class="stat-label">최소 시술 (min)</span></div>
-      <div class="stat"><span class="stat-num" data-count="12">0</span><span class="stat-label">평균 경력 (yr)</span></div>
+      <div class="stat"><span class="stat-num" data-count="87">0</span><span class="stat-label">재방문율 (%)</span></div>
+      <div class="stat"><span class="stat-num" data-count="8">0</span><span class="stat-label">하루 한정 (명)</span></div>
+      <div class="stat"><span class="stat-num" data-count="2400">0</span><span class="stat-label">누적 시술 (건)</span></div>
     </div>
   </div>
   <div class="about-visual rv-right">
-    <div class="about-img" data-hover="Our Story">
+    <div class="about-img" data-hover="Our Space">
       <div class="about-img-bg"></div>
     </div>
     <div class="about-circle" aria-hidden="true"></div>
     <div class="about-line" aria-hidden="true"></div>
-  </div>
-</section>
-
-
-
-<!-- BRAND STORY -->
-<section class="story rv" id="story">
-  <div class="story-inner">
-    <div class="story-text rv-left">
-      <div class="sec-label">Our Story</div>
-      <h2 class="sec-title">NOIR의 이야기</h2>
-      <p class="sec-desc">2018년, 단 두 평의 작은 공간에서 시작된 누아르는 '진짜 어울리는 머리'에 대한 고집 하나로 청담동까지 오게 되었습니다.</p>
-      <div class="story-highlight">"유행을 따르지 않겠다는 건,<br>더 깊이 고민하겠다는 뜻입니다."</div>
-      <p class="sec-desc">모든 고객의 두상, 모질, 라이프스타일을 분석하여 가장 자연스러운 스타일을 제안합니다. 하루 8명 한정, 완전 예약제로 운영하는 이유입니다.</p>
-      <div class="story-stats rv rv-d2">
-        <div class="stat"><span class="stat-num" data-count="87">0</span><span class="stat-label">재방문율 (%)</span></div>
-        <div class="stat"><span class="stat-num" data-count="2400">0</span><span class="stat-label">누적 시술 (건)</span></div>
-      </div>
-    </div>
-    <div class="story-visual rv-right">
-      <div class="story-img" data-hover="Our Space">
-        <div class="story-img-bg"></div>
-      </div>
-      <div class="story-timeline">
-        <div class="story-yr"><span class="story-yr-num">2018</span><span class="story-yr-desc">오픈</span></div>
-        <div class="story-yr"><span class="story-yr-num">2019</span><span class="story-yr-desc">청담 이전</span></div>
-        <div class="story-yr"><span class="story-yr-num">2021</span><span class="story-yr-desc">3인 체제</span></div>
-        <div class="story-yr"><span class="story-yr-num">2023</span><span class="story-yr-desc">어워드</span></div>
-        <div class="story-yr active"><span class="story-yr-num">현재</span><span class="story-yr-desc">8명 한정</span></div>
-      </div>
-    </div>
   </div>
 </section>
 

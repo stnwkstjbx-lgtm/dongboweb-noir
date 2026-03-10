@@ -80,19 +80,19 @@ BRAND STORY — immersive split
 .story-text .sec-desc+.sec-desc{margin-top:20px}
 .story-highlight{font-family:var(--display);font-size:clamp(1.15rem,2.2vw,1.5rem);font-style:italic;color:var(--fg2);line-height:1.85;padding:28px 0 28px 28px;border-left:2px solid var(--border3);margin:36px 0}
 .story-visual{position:relative}
-.story-img{aspect-ratio:4/5;overflow:hidden;position:relative}
+.story-img{aspect-ratio:3/4;overflow:hidden;position:relative}
 .story-img-bg{width:100%;height:100%;background:url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80') center/cover no-repeat;transition:transform .6s var(--ease)}
 .story-img:hover .story-img-bg{transform:scale(1.04)}
 .story-img::after{content:'';position:absolute;inset:0;border:1px solid var(--border2);pointer-events:none}
-.story-timeline{position:absolute;bottom:-1px;left:-1px;right:-1px;background:rgba(10,10,10,.88);backdrop-filter:blur(12px);padding:28px 32px;display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.story-timeline{background:var(--bg3);padding:24px 28px;display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:1px}
 .story-yr{text-align:center;position:relative;padding-top:16px}
 .story-yr::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--border2)}
 .story-yr::after{content:'';position:absolute;top:-3px;left:50%;width:7px;height:7px;border-radius:50%;background:var(--dim3);transform:translateX(-50%);transition:background .4s var(--ease)}
-.story-yr.active::after{background:var(--fg);box-shadow:0 0 0 3px rgba(250,250,250,.08)}
-.story-yr-num{font-family:var(--display);font-size:.7rem;color:rgba(255,255,255,.5);display:block;margin-bottom:2px}
+.story-yr.active::after{background:var(--fg);box-shadow:0 0 0 3px var(--bg2)}
+.story-yr-num{font-family:var(--display);font-size:.7rem;color:var(--dim3);display:block;margin-bottom:2px}
 .story-yr.active .story-yr-num{color:var(--fg)}
-.story-yr-desc{font-family:var(--sans);font-size:.28rem;color:rgba(255,255,255,.2);letter-spacing:.06em;display:block}
-.story-yr.active .story-yr-desc{color:rgba(255,255,255,.4)}
+.story-yr-desc{font-family:var(--sans);font-size:.28rem;color:var(--dim3);letter-spacing:.06em;display:block}
+.story-yr.active .story-yr-desc{color:var(--dim)}
 .story-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px;padding-top:32px;border-top:1px solid var(--border2)}
 .story-stats .stat{border:1px solid var(--border2)}
 
@@ -102,7 +102,7 @@ BOOKING PROCESS — horizontal flow
 .process{padding:160px 48px;background:var(--bg)}
 .proc-header{max-width:1100px;margin:0 auto 56px}
 .proc-flow{display:flex;max-width:1100px;margin:0 auto;position:relative}
-.proc-flow::before{content:'';position:absolute;top:19px;left:20px;right:20px;height:1px;background:var(--border2)}
+.proc-flow::before{content:'';position:absolute;top:20px;left:40px;right:40px;height:1px;background:var(--border2);z-index:0}
 .proc-step{flex:1;text-align:center;position:relative;padding:0 16px}
 .proc-dot{width:40px;height:40px;border-radius:50%;border:1px solid var(--border2);background:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;position:relative;z-index:1;font-family:var(--display);font-size:.7rem;color:var(--dim);transition:all .5s var(--ease)}
 .proc-step:hover .proc-dot{border-color:var(--fg);color:var(--fg);transform:scale(1.1);box-shadow:0 0 0 6px rgba(250,250,250,.03)}
@@ -451,7 +451,7 @@ HAIR CARE GUIDE — editorial layout
 .cg-item{display:grid;grid-template-columns:auto 1fr;gap:40px;padding:40px 0;border-bottom:1px solid var(--border2);align-items:start;transition:all .5s var(--ease)}
 .cg-item:first-child{padding-top:0}
 .cg-item:last-child{border-bottom:none;padding-bottom:0}
-.cg-num{font-family:var(--display);font-size:2.2rem;color:var(--bg3);line-height:1;min-width:52px;text-align:right;transition:color .5s var(--ease)}
+.cg-num{font-family:var(--display);font-size:2.2rem;color:var(--bg3);line-height:1;width:52px;flex-shrink:0;text-align:right;transition:color .5s var(--ease)}
 .cg-item:hover .cg-num{color:var(--dim)}
 .cg-body h3{font-family:var(--display);font-size:clamp(.95rem,1.4vw,1.15rem);font-weight:400;margin-bottom:6px}
 .cg-body-en{font-family:var(--sans);font-size:.34rem;color:var(--dim2);letter-spacing:.16em;text-transform:uppercase;font-weight:300;margin-bottom:16px}
@@ -1554,7 +1554,7 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   .hero{grid-template-columns:1fr}.hero-right{display:none}.hero-left{padding:120px 36px 80px}.hero-num{display:none}
   .about{grid-template-columns:1fr 1fr;gap:48px;padding:120px 36px}.about-circle{display:none}
   .ds-grid{grid-template-columns:repeat(2,1fr)}
-  .story-inner{grid-template-columns:1fr;gap:40px}.story-img{aspect-ratio:16/10}
+  .story-inner{grid-template-columns:1fr;gap:40px}.story-img{aspect-ratio:16/9}
   .proc-flow{flex-wrap:wrap}.proc-step{flex:0 0 calc(50% - 8px)}
   .prod-grid{grid-template-columns:repeat(2,1fr)}
   .pf-grid{grid-template-columns:repeat(3,1fr)}
@@ -1616,7 +1616,7 @@ footer{padding:44px 48px;border-top:1px solid var(--border2)}
   .ft-inner{flex-direction:column;gap:10px;text-align:center}
   .kakao-float{display:none}.mob-bar{display:block}
   .mob-link::after{display:none}
-  .story{padding:80px 20px}.story-inner{grid-template-columns:1fr;gap:32px}.story-timeline{position:relative;bottom:auto;left:auto;right:auto;padding:20px 16px;grid-template-columns:repeat(5,1fr)}.story-img{aspect-ratio:16/9}
+  .story{padding:80px 20px}.story-inner{grid-template-columns:1fr;gap:32px}.story-timeline{padding:20px 16px}.story-img{aspect-ratio:16/9}
   .process{padding:80px 20px}.proc-flow{flex-direction:column;gap:32px}.proc-flow::before{display:none}.proc-step{text-align:left;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:0}.proc-dot{margin:0}.proc-step p{max-width:none}
   .care-guide{padding:80px 20px}.cg-item{grid-template-columns:1fr;gap:12px}.cg-num{text-align:left;font-size:1.6rem}
   .products{padding:80px 20px}.prod-grid{grid-template-columns:1fr 1fr;gap:12px}
